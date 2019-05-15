@@ -18,9 +18,13 @@ numpy library is required. In addition, the matplotlib is required to run the sc
 synthetic.py.
 
 1 - Abstract
+
 2 - Content
+
 3 - Prerequisites
+
 4 - Running the files
+
 5 - License
 
 ================================================================================
