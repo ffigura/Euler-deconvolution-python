@@ -55,12 +55,12 @@ results and we may infer that a plug generates the Anitápolis anomaly.
 Python codes:
 
 	- euler_python.py
-	General Python module containing the functions to compute de derivatives and Euler deconvolution.
+		General Python module containing the functions to compute de derivatives and Euler deconvolution.
 	
 	- synthetic_euler_python.py
-	Python script to generate the synthetic results. The script loads the total-field anomaly of a 
-	synthetic model from the file "synthetic_data.dat" and computes the Euler deconvolution using 
-	the functions in "euler_python.py". 
+		Python script to generate the synthetic results. The script loads the total-field anomaly of a 
+		synthetic model from the file "synthetic_data.dat" and computes the Euler deconvolution using 
+		the functions in "euler_python.py". 
 	
 Outputs: 
  
@@ -82,7 +82,7 @@ Test data:
 True data for check:
 
 	- true_results/figures - all figures that generated the synthetic example in the manuscript 
-		- generated with Python 2.7
+			- generated with Python 2.7
 								
 	- true_results/estimates - all estimates for the plateau plot and the selected estimates of the 
 					classic plot
