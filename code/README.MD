@@ -65,28 +65,28 @@ Python codes:
 	
 Outputs:
 	The outputs of the synthetic_euler_python.py are stored in the folders: 
-	- synthetic_test/figures - all figures that generated the synthetic example in 
+	- results/figures - all figures that generated the synthetic example in 
 						 the manuscript will be saved in this folder
 						 
-	- synthetic_test/output - all estimates for the plateau plot and the selected
+	- results/output - all estimates for the plateau plot and the selected
 						 estimates of the classic plot, and the meand and standard 
 						 deviation will be saved in this folder
 
 Test data:
 
-	- synthetic_test/synthetic_data.dat
+	- synthetic_data.dat
 		Synthetic magnetic data generated using the Python packaged "Fatiando a Terra":
 		http://fatiando.org/. This data is an example used in the current publication.
 		
-	- synthetic_test/Linear_L_0-1.txt
+	- Linear_L_0-1.txt
 		A colormap scale to plot the magnetic data and b-estimates (Niccoli, 2014).
 
 True data for check:
 	The true data that give rises to the publication, for reviewers check
-	- synthetic_test/true_results/figures - all figures that generated the synthetic 
+	- true_results/figures - all figures that generated the synthetic 
 								example in the manuscript - generated with Python 2.7
 								
-	- synthetic_test/true_results/output - all estimates for the plateau plot and 
+	- true_results/estimates - all estimates for the plateau plot and 
 								the selected estimates of the classic plot
 
 3 - Prerequisites
@@ -104,8 +104,8 @@ The program for Euler deconvolution "euler_python.py" and the algorithm "synthet
 
 4 - Running the files
 ----------------------
-After Anaconda and the libraries are installed, go to the folder /synthetic_test/ to run 
-the code "synthetic_euler_python.py".
+After Anaconda and the libraries are installed, you need to run 
+the code "synthetic_euler_python.py" to generate the results.
 There are two easy ways to run the synthetic test "synthetic_euler_python.py"
 
 1. Via command line: 
@@ -126,8 +126,8 @@ There are two easy ways to run the synthetic test "synthetic_euler_python.py"
 the example script "synthetic_euler_python.py" and click in "play" inside the Spyder to execute it.
 
 If everything runs ok, a message will confirm the result and the figures and results shown in 
-the publication will be saved, respectively, on the folders: /synthetic_test/figures and 
-/synthetic_test/output.
+the publication will be saved, respectively, on the folders: `/results/figures` and 
+`/results/estimates`.
 
 The  module "euler_python.py" can be imported to an interactive Python session or called from
 an external Python module. The functionalities are documented using standard Python
