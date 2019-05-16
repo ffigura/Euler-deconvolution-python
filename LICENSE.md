@@ -1,4 +1,4 @@
-Copyright (c) YEAR AUTHORS.
+Copyright (c) 2019 Felipe F. Melo and Valéria C.F. Barbosa.
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
