@@ -4,6 +4,10 @@ Euler deconvolution
 A Python program to perform Euler deconvolution on gridded data
 and visualization of the estimates on classic and plateau plots.
 
+This code is released from the paper: 
+Euler deconvolution estimates on classic and plateau plots - 
+A Python implementation
+
 The program is under the conditions terms in the file README.txt
 
 authors: Felipe F. Melo and Valeria C.F. Barbosa, 2019
