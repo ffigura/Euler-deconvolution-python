@@ -59,39 +59,22 @@ A copy of the repository is also archived at *insert DOI here*
 
 ## Dependencies
 
-You'll need a working Python environment to run the code.
-The recommended way to set up your environment is through the
-[Anaconda Python distribution](https://www.anaconda.com/distribution/) which
-provides the `conda` package manager.
-Anaconda can be installed in your user directory and does not interfere with
-the system Python installation.
-The required dependencies are specified in the file `environment.yml`.
+The Python program Euler deconvolution - "euler_python.py" requires the Python library "numpy" 
+and the script "synthetic_euler_python.py" requires the Python packages "numpy" and "matplotlib". 
+The easier way to get Python and all libraries installed is through the Anaconda Python 
+distribution (https://www.anaconda.com/distribution/). After installed Anaconda, install the libraries 
+by running the following command in your terminal:
 
-We use `conda` virtual environments to manage the project dependencies in
-isolation.
-Thus, you can install our dependencies without causing conflicts with your
-setup (even with different Python versions).
+	conda install numpy matplotlib
 
-Run the following command in the repository folder (where `environment.yml`
-is located) to create a separate environment and install all required
-dependencies in it:
-
-    conda env create
-
+The program for Euler deconvolution "euler_python.py" and the algorithm "synthetic_euler_python.py"
+ are compatible with both Python 2.7 and 3.7.
 
 ## Reproducing the results
 
-Before running any code you must activate the conda environment:
-
-    source activate ENVIRONMENT_NAME
-
-or, if you're on Windows:
-
-    activate ENVIRONMENT_NAME
-
-This will enable the environment for your current terminal session.
-Any subsequent commands will use software that is installed in the environment.
-
+The results and figures for the synthetic test are reproducible from the folder `code/synthetic_test/`.
+Ruuning the code `synthetic_euler_python.py` will allow the reprodution of the results. For more information
+read the file `README.MD` or `README.txt` in the folder `code`.
 
 
 ## License
