@@ -60,8 +60,6 @@ You can download a copy of all the files in this repository by cloning the
 
 or [download a zip archive](https://github.com/ffigura/Euler-deconvolution-python/archive/master.zip).
 
-A copy of the repository is also archived at *insert DOI here*
-
 
 ## Dependencies
 
