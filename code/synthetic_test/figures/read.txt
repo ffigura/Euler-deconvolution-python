@@ -1,1 +1,1 @@
-Figures from synthetic test
+Here will be generated the figures from the synthetic test
