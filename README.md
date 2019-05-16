@@ -10,8 +10,6 @@ This paper has been submitted for publication in *Computers & Geosciences*.
 This repository contains the source code `euler_python.py`, the synthetic data `synthetic_data.dat` presented in the paper and script `synthetic_euler_python.py` to generate the results of the synthetic test.
 
 The *euler_python* program is compatible with both Python 2.7 and Python 3.7 programming language.
-
-In this work, we compare the classic and the plateau plots of Euler deconvolution estimates for gridded data to interpret magnetic anomaly. This work is a further step to clarify how these plots work in defining the source-position estimates in Euler deconvolution. We also show an application to the real magnetic data Anitápolis, southern Brazil, and infer the that a plug is the causative source.
  
 ## Abstract
 
