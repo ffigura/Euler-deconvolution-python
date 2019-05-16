@@ -1,7 +1,5 @@
 # Euler deconvolution estimates on classic and plateau plots - A Python implementation
 
-by
-
 by Felipe F. Melo (Observatório Nacional) and Valéria C. F. Barbosa (Observatório
 Nacional) (2019)
 
