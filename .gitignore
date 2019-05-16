@@ -1,0 +1,11 @@
+*~
+.*~
+*.pyc
+code/*.egg-info/
+code/.pytest_cache/
+code/.coverage
+code/notebooks/*.nbconvert.ipynb
+manuscript/figures/*-eps-converted-to.pdf
+manuscript/output/
+.env
+*/.ipynb_checkpoints/
