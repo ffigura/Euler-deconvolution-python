@@ -10,7 +10,7 @@ Email: felipe146@hotmail.com (F.F. Melo); valcris@on.br (V.C.F. Barbosa)
 This repository contains a collection of Python codes and synthetic data 
 example for a paper about the open-source package Euler deconvolution.The 
 example data reproduce the results and figures shown in the publication. The Euler deconvolution
-package is compatible with Python 2.7 and 3.7 programming language. To run the program,the 
+package euler_python.py is compatible with Python 2.7 and 3.7 programming language. To run the program,the 
 numpy library is required. In addition, the matplotlib is required to run the script 
 synthetic_euler_python.py.
 
