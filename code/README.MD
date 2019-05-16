@@ -22,7 +22,7 @@ numpy library is required. In addition, the matplotlib is required to run the sc
 
 5 - License
 
-================================================================================
+===============================================================================
 
 
 1 - Abstract
@@ -54,23 +54,23 @@ results and we may infer that a plug generates the Anitápolis anomaly.
 
 Python codes:
 
-- euler_python.py
+	- euler_python.py
 	General Python module containing the functions to compute de derivatives and 
 	Euler deconvolution.
 	
-- synthetic_test/synthetic_euler_python.py
+	- synthetic_euler_python.py
 	Python script to generate the synthetic results. The script loads the total-field
 	anomaly of a synthetic model from the file "synthetic_data.dat" and computes the
 	Euler deconvolution using the functions in "euler_python.py". 
 	
-Outputs:
-	The outputs of the synthetic_euler_python.py are stored in the folders: 
+Outputs: 
+ 
 	- results/figures - all figures that generated the synthetic example in 
-						 the manuscript will be saved in this folder
+				 the manuscript will be saved in this folder
 						 
 	- results/output - all estimates for the plateau plot and the selected
-						 estimates of the classic plot, and the meand and standard 
-						 deviation will be saved in this folder
+				 estimates of the classic plot, and the meand and standard 
+				 deviation will be saved in this folder
 
 Test data:
 
@@ -82,43 +82,41 @@ Test data:
 		A colormap scale to plot the magnetic data and b-estimates (Niccoli, 2014).
 
 True data for check:
-	The true data that give rises to the publication, for reviewers check
+
 	- true_results/figures - all figures that generated the synthetic 
-								example in the manuscript - generated with Python 2.7
+			example in the manuscript - generated with Python 2.7
 								
 	- true_results/estimates - all estimates for the plateau plot and 
-								the selected estimates of the classic plot
+			the selected estimates of the classic plot
 
 3 - Prerequisites
 ----------------------
-The Python program Euler deconvolution - "euler_python.py" requires the Python library "numpy" 
-and the script "synthetic_euler_python.py" requires the Python packages "numpy" and "matplotlib". 
+The Python program Euler deconvolution - `euler_python.py` requires the Python library "numpy" 
+and the script `synthetic_euler_python.py` requires the Python packages "numpy" and "matplotlib". 
 The easier way to get Python and all libraries installed is through the Anaconda Python 
 distribution (https://www.anaconda.com/distribution/). After installed Anaconda, install the libraries 
 by running the following command in your terminal:
 
 	conda install numpy matplotlib
 
-The program for Euler deconvolution "euler_python.py" and the algorithm "synthetic_euler_python.py"
+The program for Euler deconvolution `euler_python.py` and the algorithm `synthetic_euler_python.py`
  are compatible with both Python 2.7 and 3.7.
 
 4 - Running the files
 ----------------------
 After Anaconda and the libraries are installed, you need to run 
-the code "synthetic_euler_python.py" to generate the results.
-There are two easy ways to run the synthetic test "synthetic_euler_python.py"
+the code `synthetic_euler_python.py` to generate the results.
+There are two easy ways to run the synthetic test `synthetic_euler_python.py`
 
 1. Via command line: 
 
-	1.1 On linux based systems open the command prompt windows (terminal), go to the folder 
-	/synthetic_test and run the command:
+	1.1 On linux based systems open the command prompt windows (terminal), and run the command:
 	
 	On Python 2.7: python synthetic_euler_python.py 
 	On Python 3.7: python3 synthetic_euler_python.py 
 
 	1.2 On windows based systems open the Iphyton console (Python 2.7) or 
-	Anaconda Navigator and then Jupyter QtConsole (Python 3.7), go to the folder 
-	/synthetic_test and run the command:
+	Anaconda Navigator and then Jupyter QtConsole (Python 3.7), and run the command:
 
 	run synthetic_euler_python.py
 
@@ -129,11 +127,11 @@ If everything runs ok, a message will confirm the result and the figures and res
 the publication will be saved, respectively, on the folders: `/results/figures` and 
 `/results/estimates`.
 
-The  module "euler_python.py" can be imported to an interactive Python session or called from
+The  module `euler_python.py` can be imported to an interactive Python session or called from
 an external Python module. The functionalities are documented using standard Python
 docstrings.
 
-The file "synthetic_euler_python.py" is a Python-based command line script. By using this 
+The file `synthetic_euler_python.py` is a Python-based command line script. By using this 
 script, the figures and results of the synthetic test presented in the publication can be reproduced.
 
 
@@ -143,7 +141,7 @@ The following legal note is restricted solely to the content of the named files.
 overrule licenses from the Python standard distribution modules, which are imported and
 used therein.
 
-The "euler_python.py" and "synthetic_euler_python.py" files are distributed under the 
+The `euler_python.py` and `synthetic_euler_python.py` files are distributed under the 
 following license agreement:
 
 BSD 3-clause license
