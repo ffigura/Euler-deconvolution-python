@@ -3,9 +3,15 @@
 by
 Felipe F. Melo and Valéria C.F. Barbosa
 
+## About
+
 This paper has been submitted for publication in *Computers & Geosciences*.
 
-We compare the classic and the plateau plots of Euler deconvolution estimates for gridded data to interpret magnetic anomaly. This work is a further step to clarify how these plots work in defining the source-position estimates in Euler deconvolution. We also show an application to the real magnetic data Anitápolis, southern Brazil, and infer the that a plug is the causative source.
+This repository contains the source code `euler_python.py`, the synthetic data `synthetic_data.dat` presented in the paper and script `synthetic_euler_python.py` to generate the results of the synthetic test.
+
+The *euler_python* program is compatible with both Python 2.7 and Python 3.7 programming language.
+
+In this work, we compare the classic and the plateau plots of Euler deconvolution estimates for gridded data to interpret magnetic anomaly. This work is a further step to clarify how these plots work in defining the source-position estimates in Euler deconvolution. We also show an application to the real magnetic data Anitápolis, southern Brazil, and infer the that a plug is the causative source.
  
 ## Abstract
 
@@ -30,20 +36,22 @@ compare these visualizations of solutions by applying Euler deconvolution to the
 of Anitápolis in southern Brazil. Either classic or plateau plots of Euler estimates yields similar 
 results and we may infer that a plug generates the Anitápolis anomaly.
 
-## Software implementation
+## Content
 
+- euler_python.py:
+	General Python module containing the functions to compute de derivatives and 
+	Euler deconvolution.
+	
+- synthetic_euler_python.py:
+	Python script to generate the synthetic results. The script loads the total-field
+	anomaly of a synthetic model from the file "synthetic_data.dat" and computes the
+	Euler deconvolution using the functions in "euler_python.py". 
+	
+Test data:
 
-The algorithm was developed in Python and it is compatible with both Python 2.7 and Python 3.7.
-The source code `euler_python.py` used to generate the results in the paper is in
-the folder `code/`.
-The reproducible synthetic example is in the folder `code/synthetic_test/`.
-The results can be obtaind with the code
-`synthetic_euler_python.py`, which uses the source code `euler_python.py` and the data `synthetic_data.dat`.
-The estimates and statistics are saved in `code/synthetic_test/output` and the 
-figures in `code/synthetic_test/figures/`. The true results, for comparison, are
-stored in `code/synthetic_test/true_results/figures/` and `code/synthetic_test/true_results/output/`
-See the `README.md` files in each directory for a full description.
-
+- synthetic_data.dat:
+		Synthetic magnetic data generated using the Python packaged "Fatiando a Terra":
+		http://fatiando.org/. This data is an example used in the current publication.
 
 ## Getting the code
 
@@ -67,14 +75,14 @@ by running the following command in your terminal:
 
 	conda install numpy matplotlib
 
-The program for Euler deconvolution "euler_python.py" and the algorithm "synthetic_euler_python.py"
+The program for Euler deconvolution "euler_python.py" and "synthetic_euler_python.py"
  are compatible with both Python 2.7 and 3.7.
 
 ## Reproducing the results
 
-The results and figures for the synthetic test are reproducible from the folder `code/synthetic_test/`.
+The results and figures for the synthetic test are reproducible from the folder `code/`.
 Ruuning the code `synthetic_euler_python.py` will allow the reprodution of the results. For more information
-read the file `README.MD` or `README.txt` in the folder `code`.
+read the file `README.MD` or `README.txt` in the folder `code/`.
 
 
 ## License
