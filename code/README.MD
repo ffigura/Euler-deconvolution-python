@@ -58,27 +58,34 @@ Python codes:
 	General Python module containing the functions to compute de derivatives and Euler deconvolution.
 	
 	- synthetic_euler_python.py
-	Python script to generate the synthetic results. The script loads the total-field anomaly of a synthetic model from the file "synthetic_data.dat" and computes the Euler deconvolution using the functions in "euler_python.py". 
+	Python script to generate the synthetic results. The script loads the total-field anomaly of a 
+	synthetic model from the file "synthetic_data.dat" and computes the Euler deconvolution using 
+	the functions in "euler_python.py". 
 	
 Outputs: 
  
-	- results/figures - all figures that generated the synthetic example in the manuscript will be saved in this folder
+	- results/figures - all figures that generated the synthetic example in the manuscript will be saved
+				in this folder
 						 
-	- results/output - all estimates for the plateau plot and the selected estimates of the classic plot, and the meand and standard deviation will be saved in this folder
+	- results/output - all estimates for the plateau plot and the selected estimates of the classic plot, 
+				and the meand and standard deviation will be saved in this folder
 
 Test data:
 
 	- synthetic_data.dat
-		Synthetic magnetic data generated using the Python packaged "Fatiando a Terra":	http://fatiando.org/. This data is an example used in the current publication.
+		Synthetic magnetic data generated using the Python packaged "Fatiando a Terra":	
+		http://fatiando.org/. This data is an example used in the current publication.
 		
 	- Linear_L_0-1.txt
 		A colormap scale to plot the magnetic data and b-estimates (Niccoli, 2014).
 
 True data for check:
 
-	- true_results/figures - all figures that generated the synthetic example in the manuscript - generated with Python 2.7
+	- true_results/figures - all figures that generated the synthetic example in the manuscript 
+		- generated with Python 2.7
 								
-	- true_results/estimates - all estimates for the plateau plot and the selected estimates of the classic plot
+	- true_results/estimates - all estimates for the plateau plot and the selected estimates of the 
+					classic plot
 
 3 - Prerequisites
 ----------------------
