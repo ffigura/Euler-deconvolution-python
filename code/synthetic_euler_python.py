@@ -47,7 +47,7 @@ def classic_plot_z(data,estx,esty,estz,yi,xi,shape,SI,name,filt):
                          c=(estz/1000.), cmap='terrain_r', edgecolor='black',
                      vmin=minz, vmax=maxz)    
     cbar=fig.colorbar(scat,ticks=levelsz,pad=0.01,shrink=1,format='%0.1f')
-    cbar.set_label('$\^z_o $ (km)',labelpad=-18,y=-0.03, rotation=0,fontsize=13)
+    cbar.set_label('$\^z_o $ (km)',labelpad=-18,y=-0.03,rotation=0,fontsize=13)
     cbar.ax.tick_params(labelsize=13)
     ax.add_patch(rect1)
     ax.add_patch(rect2)
@@ -56,8 +56,8 @@ def classic_plot_z(data,estx,esty,estz,yi,xi,shape,SI,name,filt):
     ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
     ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
     ax.set_xticks([0,5,10,15])
-    plt.savefig('figures/Fig.4_SI_'+ str(SI)+'_'+str(name)+'.png',dpi=300,  
-                bbox_inches='tight')
+    plt.savefig('results/figures/Fig.4_SI_'+ str(SI)+'_'+str(name)+'.png',
+                dpi=300,bbox_inches='tight')
     plt.close(fig)
     
     return        
@@ -92,8 +92,8 @@ def classic_plot_b(data,estx,esty,estb,yi,xi,shape,SI,name,filt):
     ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
     ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
     ax.set_xticks([0,5,10,15])
-    plt.savefig('figures/Fig.4_SI_'+ str(SI)+'_'+str(name)+'.png',dpi=300,  
-                bbox_inches='tight')
+    plt.savefig('results/figures/Fig.4_SI_'+ str(SI)+'_'+str(name)+'.png',
+                dpi=300,bbox_inches='tight')
     plt.close(fig)
     
     return   
@@ -133,8 +133,8 @@ def plateu_plot_x(estimate,yi,xi,shape,SI,area_plt1,area_plt2,name):
     ax.set_xticks([0,5,10,15])
     plt.text(16,20,'B',color='w',weight='bold', size='x-large')
     plt.text(9,9,'A',color='w',weight='bold', size='x-large') 
-    plt.savefig('figures/Fig.5_SI_'+ str(SI)+'_'+str(name)+'.png',dpi=300,
-                bbox_inches='tight')
+    plt.savefig('results/figures/Fig.5_SI_'+ str(SI)+'_'+str(name)+'.png',
+                dpi=300,bbox_inches='tight')
     plt.close(fig)
     
     return
@@ -174,8 +174,8 @@ def plateu_plot_y(estimate,yi,xi,shape,SI,area_plt1,area_plt2,name):
     ax.set_xticks([0,5,10,15])
     plt.text(16,20,'B',color='w',weight='bold', size='x-large')
     plt.text(9,9,'A',color='w',weight='bold', size='x-large') 
-    plt.savefig('figures/Fig.5_SI_'+ str(SI)+'_'+str(name)+'.png',dpi=300,
-                bbox_inches='tight')
+    plt.savefig('results/figures/Fig.5_SI_'+ str(SI)+'_'+str(name)+'.png',
+                dpi=300,bbox_inches='tight')
     plt.close(fig)
     
     return
@@ -215,7 +215,7 @@ def plateu_plot_z(estimate,yi,xi,shape,SI,area_plt1,area_plt2,name):
     ax.tick_params(labelsize=13)
     cbar=fig.colorbar(im,boundaries=levelsz,ticks=levelsz,pad=0.01,shrink=1,
                       format='%.1f') 
-    cbar.set_label('$\^z_o $ (km)',labelpad=-17,y=-0.03, rotation=0,fontsize=13)
+    cbar.set_label('$\^z_o $ (km)',labelpad=-17,y=-0.03,rotation=0,fontsize=13)
     cbar.ax.tick_params(labelsize=13)
     ax.add_patch(rect1)
     ax.add_patch(rect2)
@@ -224,8 +224,8 @@ def plateu_plot_z(estimate,yi,xi,shape,SI,area_plt1,area_plt2,name):
     plt.text(16,20,'B',color='w',weight='bold', size='x-large')
     plt.text(9,9,'A',color='w',weight='bold', size='x-large') 
     ax.set_xticks([0,5,10,15])
-    plt.savefig('figures/Fig.5_SI_'+ str(SI)+'_'+str(name)+'.png',dpi=300,
-                bbox_inches='tight')
+    plt.savefig('results/figures/Fig.5_SI_'+ str(SI)+'_'+str(name)+'.png',
+                dpi=300,bbox_inches='tight')
     plt.close(fig)
     
     return
@@ -272,8 +272,8 @@ def plateu_plot_b(estimate,yi,xi,shape,SI,area_plt1,area_plt2,name):
     ax.set_xticks([0,5,10,15])
     plt.text(16,20,'B',color='w',weight='bold', size='x-large')
     plt.text(9,9,'A',color='w',weight='bold', size='x-large') 
-    plt.savefig('figures/Fig.5_SI_'+ str(SI)+'_'+str(name)+'.png',dpi=300,
-                bbox_inches='tight')
+    plt.savefig('results/figures/Fig.5_SI_'+ str(SI)+'_'+str(name)+'.png',
+                dpi=300,bbox_inches='tight')
     plt.close(fig)
     
     return
@@ -337,7 +337,7 @@ ax.add_patch(rect2)
 cbar.ax.tick_params(labelsize=13)
 plt.text(16,20,'B',color='k',weight='bold', size='x-large')
 plt.text(9,9,'A',color='k',weight='bold', size='x-large') 
-plt.savefig('figures/Fig.3b_input.png',dpi=300,bbox_inches='tight')
+plt.savefig('results/figures/Fig.3b_input.png',dpi=300,bbox_inches='tight')
 plt.close(fig)
 
 #moving data window size
@@ -407,31 +407,30 @@ for i, SI in enumerate(SI):
                        est_plt[:,3]),axis=-1)    
 
     #save estimates for plateau plot with coordinates 
-    np.savetxt('output/all_estimates_SI_'+ str(SI)+'.dat',xy_estimates,
-               delimiter=' ',fmt='%1.3f',header="coorx, coordy,"\
+    np.savetxt('results/estimates/all_estimates_SI_'+ str(SI)+'.dat',
+               xy_estimates,delimiter=' ',fmt='%1.3f',header="coorx, coordy,"\
            "outx,outy, outz,outb",comments='')
     xy_estimates=[]
     #save estimates for traditional plot
-    np.savetxt('output/selected_estimates_SI_'+ str(SI)+'.dat',est_cl,
-               delimiter=' ',fmt='%1.3f',header="coorx, coordy,"\
+    np.savetxt('results/estimates/selected_estimates_SI_'+ str(SI)+'.dat',
+               est_cl,delimiter=' ',fmt='%1.3f',header="coorx, coordy,"\
            "outx,outy, outz,outb",comments='')
     
 
 
 #statistics of the estimate on traditional plot
-np.savetxt('output/statistics_classic_sourceA.txt',stat_cla1,fmt='%0.3f', \
-           header="SI, mean x,std x,mean y, std y,mean z, std z,mean b,"\
-           "std b",comments='')     
-np.savetxt('output/statistics_classic_sourceB.txt',stat_cla2,fmt='%0.3f', \
-           header="SI, mean x,std x,mean y, std y,mean z, std z,mean b,"\
-           "std b",comments='')     
-
+np.savetxt('results/estimates/statistics_classic_sourceA.txt',stat_cla1,
+           fmt='%0.3f',header="SI, mean x,std x,mean y, std y,mean z, std z,"\
+           "mean b,std b",comments='')     
+np.savetxt('results/estimates/statistics_classic_sourceB.txt',stat_cla2,
+           fmt='%0.3f',header="SI, mean x,std x,mean y, std y,mean z, std z,"\
+           "mean b,std b",comments='')     
 #statistics of the estimate on plateau plot
-np.savetxt('output/statistics_plateau_sourceA.txt',stat_plt1,fmt='%0.3f', \
-           header="SI, mean x,std x,mean y, std y,mean z, std z,mean b,"\
-           "std b",comments='')
-np.savetxt('output/statistics_plateau_sourceB.txt',stat_plt2,fmt='%0.3f', \
-           header="SI, mean x,std x,mean y, std y,mean z, std z,mean b,"\
-           "std b",comments='')
+np.savetxt('results/estimates/statistics_plateau_sourceA.txt',stat_plt1,
+           fmt='%0.3f',header="SI, mean x,std x,mean y, std y,mean z, std z,"\
+           "mean b,std b",comments='')     
+np.savetxt('results/estimates/statistics_plateau_sourceB.txt',stat_plt2,
+           fmt='%0.3f',header="SI, mean x,std x,mean y, std y,mean z, std z,"\
+           "mean b,std b",comments='')     
 		   
-print ('Congratulations, the results are on the folders: figures and output')
+print ('Congratulations, go to /results/figures and /results/estimates.')
