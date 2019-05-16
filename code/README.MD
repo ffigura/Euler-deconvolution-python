@@ -1,6 +1,6 @@
-README for
+# Euler deconvolution estimates on classic and plateau plots - A Python implementation
 
-euler_python.py - "Euler deconvolution estimates on classic and plateau plots - A Python implementation"
+by
 
 by Felipe F. Melo (Observatório Nacional) and Valéria C. F. Barbosa (Observatório
 Nacional) (2019)
@@ -12,7 +12,7 @@ example for a paper about the open-source package Euler deconvolution.The
 example data reproduce the results and figures shown in the publication. The Euler deconvolution
 package is compatible with Python 2.7 and 3.7 programming language. To run the program,the 
 numpy library is required. In addition, the matplotlib is required to run the script 
-synthetic_euler_python.py.
+`synthetic_euler_python.py`.
 
 1 - Abstract
 
