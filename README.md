@@ -5,12 +5,9 @@ Felipe F. Melo and Valéria C.F. Barbosa
 
 ## About
 
-This paper has been submitted for publication in *Computers & Geosciences*.
+This paper has been submitted for publication in the journal *Computers & Geosciences*.
 
-This repository contains the source code to perform the two synthetic tests presented.
-The codes `euler_python.py`, the synthetic data `synthetic_data.dat` presented in the
-paper and the codes `synthetic_test.py`, `estimates_statistics.py` and `plot_functions`
-to generate the results of the synthetic test.
+This repository contains the source code to perform the two synthetic tests presented. The codes `euler_python.py`, the synthetic data `synthetic_data.dat` presented in the paper and the codes `synthetic_test.py`, `estimates_statistics.py` and `plot_functions` to generate the results of the synthetic test.
 
 The *euler_python* program is compatible with both Python 2.7 and Python 3.7 programming language.
  
@@ -24,16 +21,25 @@ We propose a novel methodology to select reliable Euler deconvolution estimates 
 	General Python module containing the functions to compute de derivatives and 
 	Euler deconvolution.
 	
-- synthetic_euler_python.py:
+- synthetic_test.py:
 	Python script to generate the synthetic results. The script loads the total-field
 	anomaly of a synthetic model from the file "synthetic_data.dat" and computes the
-	Euler deconvolution using the functions in "euler_python.py". 
+	Euler deconvolution using the functions in "euler_python.py". The results are 
+	generated using the functions "plot_functions.py" for the plots and 
+	"estimates_statistics.py" to compute the statistics of the data.
+	
+- plot_functions.py:
+	Python script to generate the figures in the synthetic tests results. 
+	
+- estimates_statistics.py:
+	Python script to compute the statistics over the classic and plateau plots. 	
 	
 Test data:
 
 - synthetic_data.dat:
-		Synthetic magnetic data generated using the Python packaged "Fatiando a Terra":
-		http://fatiando.org/. This data is an example used in the current publication.
+		Synthetic total-field anomaly data generated using the Python packaged
+		"Fatiando a Terra": http://fatiando.org/. This data is an example used
+		in the current publication.
 
 ## Getting the code
 
@@ -47,8 +53,9 @@ or [download a zip archive](https://github.com/ffigura/Euler-deconvolution-pytho
 
 ## Dependencies
 
-The Python program Euler deconvolution - "euler_python.py" requires the Python library "numpy" 
-and the script "synthetic_euler_python.py" requires the Python packages "numpy" and "matplotlib". 
+The Python program Euler deconvolution - "euler_python.py" requires the Python library "numpy", 
+the scripts "synthetic_test.py" and "plot_functions.py" require the Python packages "numpy"
+and "matplotlib", and the script "estimates_statistics.py" requires the Python package "numpy".
 The easier way to get Python and all libraries installed is through the Anaconda Python 
 distribution (https://www.anaconda.com/distribution/). After installed Anaconda, install the libraries 
 by running the following command in your terminal:
@@ -60,8 +67,9 @@ The program for Euler deconvolution "euler_python.py" and "synthetic_euler_pytho
 
 ## Reproducing the results
 
-The results and figures for the synthetic test are reproducible from the folder `code/`.
-Ruuning the code `synthetic_euler_python.py` will allow the reprodution of the results. For more information
+The results and figures for the synthetic test are reproducible from the folder `code/test_4_sources` and 
+`code/test_2_sources`.
+Ruuning the code `synthetic_test.py` will allow the reprodution of the results. For more information
 read the file `README.MD` or `README.txt` in the folder `code/`.
 
 
