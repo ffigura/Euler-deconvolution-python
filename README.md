@@ -69,7 +69,7 @@ The program for Euler deconvolution "euler_python.py" and the additional codes "
 
 The results and figures for the synthetic test are reproducible from the folders `/test_4_sources` and 
 `/test_2_sources`.
-Runing the code `synthetic_test.py` will allow the reprodution of the results. For more information
+Running the code `synthetic_test.py` will allow the reprodution of the results. For more information
 read the file `README.MD` or `README.txt` in the folder `/code`.
 
 
