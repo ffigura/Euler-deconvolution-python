@@ -66,10 +66,12 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
     
     plt.title('(a)', fontsize = 14, loc='center',y=-0.23)
     
-    rect2 = patches.Rectangle((4.050,5.850),0.4,0.4,linewidth=1,edgecolor='crimson',
-                              facecolor='none',linestyle='-',zorder=2)
-    rect3 = patches.Rectangle((5.850,6.850),0.3,0.3,linewidth=1,edgecolor='crimson',
-                              facecolor='none',linestyle='-',zorder=2)
+    rect2 = patches.Rectangle((4.050,5.850),0.4,0.4,linewidth=1,
+                              edgecolor='crimson',facecolor='none',
+                              linestyle='-',zorder=2)
+    rect3 = patches.Rectangle((5.850,6.850),0.3,0.3,linewidth=1,
+                              edgecolor='crimson',facecolor='none',
+                              linestyle='-',zorder=2)
     im=plt.contourf(yi.reshape(shape)/1000.,xi.reshape(shape)/1000.,
                    data.reshape(shape), 30, cmap=my_cmap)
     ax = plt.gca()
@@ -101,11 +103,12 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
         ax.set_ylabel('Northing (km)', fontsize = 14)
         ax.set_xlabel('Easting (km)', fontsize = 14)
         ax.tick_params(labelsize=13)
-        scat=plt.scatter(est_classic[i][:,1]/1000., est_classic[i][:,0]/1000.,s=50,
-                         c=(est_classic[i][:,2]/1000.), cmap='terrain_r',
+        scat=plt.scatter(est_classic[i][:,1]/1000., est_classic[i][:,0]/1000.,
+                         s=50,c=(est_classic[i][:,2]/1000.), cmap='terrain_r',
                          vmin=minz, vmax=maxz,edgecolors='k')            
         cbar=plt.colorbar(scat,ticks=levelsz,pad=0.01,shrink=1,format='%0.1f')
-        cbar.set_label('$\^z_o$ (km)',labelpad=-18,y=-0.05, rotation=0,fontsize=13)
+        cbar.set_label('$\^z_o$ (km)',labelpad=-18,y=-0.05, rotation=0,
+                       fontsize=13)
         cbar.ax.tick_params(labelsize=13)
         ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
         ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
