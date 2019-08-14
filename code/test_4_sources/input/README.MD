@@ -12,3 +12,6 @@
 	
 - Linear_L_0-1.txt
 	A colormap scale to plot the magnetic data and b-estimates (Niccoli, 2014).
+	
+- prisms_ppt.tif
+	Pictorial representation of the sources, for plot purposes.
