@@ -184,7 +184,7 @@ def plot_input_data(data,xi,yi,zi,shape):
 def plot_classic(data,est_classic,xi,yi,zi,shape):
     '''
     Classic plot of the depth and base level estimates for all SIs
-	Figure 4 - The figure was split in 2 parts for conveninece
+	Figure 4 - The figure was split in two parts for convenience.
     '''
     vet_title=[["(a)","(b)","(c)","(d)"],["(e)","(f)","(g)","(h)"]]
     vet_title2=['abcd','efgh']
@@ -396,7 +396,7 @@ def plot_plateau_xy(data,est_plateau,xi,yi,zi,shape):
 def plot_plateau(data,est_plateau,xi,yi,zi,shape):
     '''
     Plateau plot of the depth and base level estimates for all SIs
-    Figure 6 - the figure was split in two parts for convenience
+    Figure 6 - The figure was split in two parts for convenience.
     '''
     vet_title=[["(a)","(b)","(c)","(d)"],["(e)","(f)","(g)","(h)"]]
     vet_title2=['abcd','efgh']
