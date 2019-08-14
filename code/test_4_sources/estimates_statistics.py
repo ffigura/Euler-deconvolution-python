@@ -29,8 +29,8 @@ def classic(est_classic,area_plt,name):
         estimates=np.stack((est_classic[i][:,0],est_classic[i][:,1],
                             est_classic[i][:,2],est_classic[i][:,3]),axis=-1)
         
-        masked =np.ma.array(estimates,mask=np.repeat(estimates[:,0]<=area_plt[0],
-                                                       estimates.shape[1]))
+        masked =np.ma.array(estimates,mask=np.repeat(estimates[:,0]<=
+                                            area_plt[0],estimates.shape[1]))
         masked = np.ma.array(masked, mask=np.repeat(masked[:,0]>=area_plt[1],
                                                         estimates.shape[1]))
         masked = np.ma.array(masked, mask=np.repeat(masked[:,1]<=area_plt[2],
@@ -53,10 +53,11 @@ def plateau(est_plateau,xi,yi,area_plt,name):
     results=[]
     
     for i in range (len(est_plateau)):
-        estimates=np.stack((xi,yi,est_plateau[i][:,2],est_plateau[i][:,3]),axis=-1)
+        estimates=np.stack((xi,yi,est_plateau[i][:,2],est_plateau[i][:,3]),
+                           axis=-1)
         
-        masked =np.ma.array(estimates,mask=np.repeat(estimates[:,0]<=area_plt[0],
-                                                       estimates.shape[1]))
+        masked =np.ma.array(estimates,mask=np.repeat(estimates[:,0]<=
+                                            area_plt[0],estimates.shape[1]))
         masked = np.ma.array(masked, mask=np.repeat(masked[:,0]>=area_plt[1],
                                                         estimates.shape[1]))
         masked = np.ma.array(masked, mask=np.repeat(masked[:,1]<=area_plt[2],
