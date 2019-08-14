@@ -61,7 +61,7 @@ def plot_input_data(data,xi,yi,zi,shape):
     data_input=np.loadtxt('input/synthetic_base_level.dat')
     input_b=data_input[:,3]
     
-    data_input=np.loadtxt('input/noise_free_synthetic_data.dat')
+    data_input=np.loadtxt('input/noise_synthetic_data.dat')
     noise_free_data=data_input[:,3]
 
     im1 = plt.imread('input/prisms_ppt.tif')
