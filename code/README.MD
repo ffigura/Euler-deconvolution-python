@@ -128,8 +128,8 @@ There are two easy ways to run the synthetic test `synthetic_python.py`
 2. Open the Spyder program that comes with the Ananconda installation. In the Spyder, open
 the example script "synthetic_euler_python.py" and click in "play" inside the Spyder to execute it.
 
-If everything runs ok, a message will confirm the result and the figures and results shown in 
-the publication will be saved, respectively, on the folders: `/figures` and `/results`.
+If everything runs ok, the figures and results shown in the publication will be saved, respectively,
+on the folders: `/figures` and `/results`.
 
 The  module `euler_python.py` can be imported to an interactive Python session or called from
 an external Python module. The functionalities are documented using standard Python
