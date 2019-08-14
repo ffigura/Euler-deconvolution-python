@@ -62,15 +62,15 @@ by running the following command in your terminal:
 
 	conda install numpy matplotlib
 
-The program for Euler deconvolution "euler_python.py" and "synthetic_euler_python.py"
- are compatible with both Python 2.7 and 3.7.
+The program for Euler deconvolution "euler_python.py" and the additional codes "synthetic_test.py",
+"plot_functions.py" and "estimates_statistics.py" are compatible with both Python 2.7 and 3.7.
 
 ## Reproducing the results
 
-The results and figures for the synthetic test are reproducible from the folder `code/test_4_sources` and 
-`code/test_2_sources`.
+The results and figures for the synthetic test are reproducible from the folders `/test_4_sources` and 
+`/test_2_sources`.
 Ruuning the code `synthetic_test.py` will allow the reprodution of the results. For more information
-read the file `README.MD` or `README.txt` in the folder `code/`.
+read the file `README.MD` or `README.txt` in the folders `/test_4_sources` and `/test_2_sources`.
 
 
 ## License
