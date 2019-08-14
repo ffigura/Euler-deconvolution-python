@@ -1,6 +1,6 @@
 # Synthetic test 1 – Distinct SIs and strong nonlinear magnetic base level
 
-Runing the code `synthetic_test.py` will allow the reprodution of the results.
+Running the code `synthetic_test.py` will allow the reprodution of the results.
 The figures generated may differ from the publication and 
 can be adapted in the script `plot_functions.py`.
 
