@@ -1,4 +1,4 @@
-# Synthetic test 2 – Nearby sources 
+# Synthetic test 2 – Nearby sources with remanence
 
 Running the code `synthetic_test.py` will allow the reprodution of the results.
 The figures generated may differ from the publication and 
