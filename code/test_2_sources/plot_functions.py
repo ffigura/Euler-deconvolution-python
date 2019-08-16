@@ -155,7 +155,7 @@ def plot_plateau(data,est_plateau,xi,yi,zi,shape):
         gc.collect()
         # until here was to limit the colorbar
         plt.subplot(2,2,i*2+1)  
-        rect_plt2=patches.Rectangle((6.3,6.6),0.8,1.3,linewidth=1,
+        rect_plt2=patches.Rectangle((6.2,6.5),0.7,1.3,linewidth=1,
                                     edgecolor='crimson',facecolor='none',
                                     linestyle='-',zorder=2)
         rect_plt3=patches.Rectangle((3.3,5),0.9,1.4,linewidth=1,
@@ -187,15 +187,15 @@ def plot_plateau(data,est_plateau,xi,yi,zi,shape):
 
         #base  level plot       
         
-        rect_plt2=patches.Rectangle((6.3,6.6),0.8,1.3,linewidth=1,
+        rect_plt2=patches.Rectangle((6.2,6.5),0.7,1.3,linewidth=1,
                                     edgecolor='white',facecolor='none',
                                     linestyle='-',zorder=2)
         rect_plt3=patches.Rectangle((3.3,5),0.9,1.4,linewidth=1,
                                     edgecolor='white',facecolor='none',
                                     linestyle='-',zorder=2)
     
-        minb = np.min(-10)
-        maxb = np.max(50)
+        minb = np.min(-50)
+        maxb = np.max(20)
         levelsb = np.linspace(minb,maxb,7)
         levelsb2 = np.linspace(minb,maxb,30)
   

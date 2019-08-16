@@ -32,7 +32,7 @@ These are the two parameters of our methodology for Euler deconvolution:
 window size and the percentage of solutions to keep
 '''
 #moving data window size
-winsize=7
+winsize=5
 #percentage of the solutions that will be keep
 filt=0.02
 #empty arrays for multiple SIs
@@ -61,7 +61,7 @@ plt_fc.plot_plateau(data,est_plateau,xi,yi,zi,shape)
 Areas used to get the statistics - Defined after the classic plot
 south,northing,west,east - meters the same unit as input
 '''
-area_cla2=[6600,7700,5200,6500]
+area_cla2=[6000,8000,5800,7000]
 area_cla3=[5000,7000,3500,5000]
 
 est_stats.classic(est_classic,area_cla2,'classic_plt2')
@@ -71,7 +71,7 @@ est_stats.classic(est_classic,area_cla3,'classic_plt3')
 Plateaus used to get the statistics - Defined after the plateau plot
 south,northing,west,east - meters the same unit as input
 ''' 
-area_plt2=[6600,7900,6300,7100]
+area_plt2=[6500,7800,6200,6900]
 area_plt3=[5000,6400,3300,4200]
 
 est_stats.plateau(est_plateau,xi,yi,area_plt2,'plateau_plt2')
