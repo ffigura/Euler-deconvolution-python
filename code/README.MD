@@ -104,7 +104,7 @@ by running the following command in your terminal:
 
 	conda install numpy matplotlib
 
-The program for Euler deconvolution `euler_python.py` and the algorithm `synthetic_euler_python.py`
+The program for Euler deconvolution `euler_python.py` and the algorithm `synthetic_python.py`
  are compatible with both Python 2.7 and 3.7.
 
 4 - Running the files
@@ -126,7 +126,7 @@ There are two easy ways to run the synthetic test `synthetic_python.py`
 	run synthetic_python.py
 
 2. Open the Spyder program that comes with the Ananconda installation. In the Spyder, open
-the example script "synthetic_euler_python.py" and click in "play" inside the Spyder to execute it.
+the example script "synthetic_python.py" and click in "play" inside the Spyder to execute it.
 
 If everything runs ok, the figures and results shown in the publication will be saved, respectively,
 on the folders: `/figures` and `/results`.
