@@ -1,8 +1,8 @@
 """
-Synthetic test 1
+Synthetic test 2
 
 A Python program to compute the Synthetic test 2 
-Nearby sources 
+Nearby sources with remanence
 
 This code is released from the paper: 
 Reliable Euler deconvolution estimates throughout the
