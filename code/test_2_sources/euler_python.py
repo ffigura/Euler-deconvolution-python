@@ -5,8 +5,8 @@ A Python program to perform Euler deconvolution on gridded data
 and visualization of the estimates on classic and plateau plots.
 
 This code is released from the paper: 
-Reliable Euler deconvolution estimates throughout the
-vertical derivatives in the sensitivity matrix
+Euler deconvolution estimates on classic and plateau plots - 
+A Python implementation
 
 The program is under the conditions terms in the file README.txt
 
@@ -240,9 +240,8 @@ def euler_deconv(data,xi,yi,zi,shape,area,SI,windowSize,filt):
         ATy=np.dot(A.T,vety)
         p=np.dot(ATA,ATy)
         
-        #variance and standard deviation of z derivative
-        covA=np.cov(A.T)
-        stdz=np.sqrt(covA[2,2])
+        #standard deviation of z derivative (for populations population)
+        stdz=np.sqrt(np.sum(abs(A[:,2] - A[:,2].mean())**2)/(len(A[:,2])-1.))
         
         estx[south+windowSize//2][east+windowSize//2]=p[0]
         esty[south+windowSize//2][east+windowSize//2]=p[1]
@@ -273,36 +272,3 @@ def euler_deconv(data,xi,yi,zi,shape,area,SI,windowSize,filt):
                         axis=-1)
     
     return classic_est,plateau_est
-
-def statistics_solutions(estimates,area_plt):
-    """
-    Compute the mean and standard deviation of the  
-    x, y, z and base level estimates 
-
-    Parameters:
-
-    * estimates : 2d-array
-        the x, y, z and base-leve estimates
-    * area_plt : list
-        the area to perform the computation
-
-    Returns:
-
-    * statistics : tuple(meanx,stdx,meany,stdy,meanz,stdz,meanb,stdz)
-        mean and standard deviation of the x, y, z, and base-level estimates
-    """     
-    masked =np.ma.array(estimates,mask=np.repeat(estimates[:,0]<=area_plt[0],
-                                                   estimates.shape[1]))
-    masked = np.ma.array(masked, mask=np.repeat(masked[:,0]>=area_plt[1],
-                                                    estimates.shape[1]))
-    masked = np.ma.array(masked, mask=np.repeat(masked[:,1]<=area_plt[2],
-                                                    estimates.shape[1]))
-    masked = np.ma.array(masked, mask=np.repeat(masked[:,1]>=area_plt[3],
-                                                    estimates.shape[1]))
-    
-    statistics=(np.mean(masked[:, 0]/1000.),np.std(masked[:,0]/1000.), \
-                np.mean(masked[:, 1]/1000.),np.std(masked[:,1]/1000.), \
-                np.mean(masked[:, 2]/1000.),np.std(masked[:,2]/1000.), \
-                np.mean(masked[:,3]),np.std(masked[:,3]))
-    
-    return statistics
