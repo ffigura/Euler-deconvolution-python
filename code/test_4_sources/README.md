@@ -6,10 +6,8 @@ can be adapted in the script `plot_functions.py`.
 
 ## Outputs:
 
-- figures - all figures that generated the synthetic example in the manuscript will be saved
+- figures - Figures 2, 3 and 4 of the synthetic example in the manuscript will be saved
 		in this folder. The figures generated may differ from the publication and
-		can be adapted in the script `plot_functions.py`. Figures 4 and 6 were split
-		in two parts for convenience.
-					 
-- results - the mean and standard deviation of classic and plateau plots over the
-		selected area.
+		can be adapted in the script `plot_functions.py`.
+		
+- results - the mean of the depth estimates over the selected areas.
