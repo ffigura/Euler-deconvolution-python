@@ -1,12 +1,11 @@
 """
 Euler deconvolution 
 
-A Python program to perform Euler deconvolution on gridded data
-and visualization of the estimates on classic and plateau plots.
+A Python program to perform Euler deconvolution on gridded data.
 
 This code is released from the paper: 
-Euler deconvolution estimates on classic and plateau plots - 
-A Python implementation
+Reliable Euler deconvolution estimates throughout the
+vertical derivatives in the sensitivity matrix
 
 The program is under the conditions terms in the file README.txt
 
@@ -200,8 +199,6 @@ def euler_deconv(data,xi,yi,zi,shape,area,SI,windowSize,filt):
 
     Returns:
 
-    * estimates_plt : 2d-array
-        x, y, z, and base-level estimates for plateau plot
     * estimates_clu : 2d-array
         x, y, z and base-level best estimates kept after select a percentage
     """   
@@ -255,20 +252,10 @@ def euler_deconv(data,xi,yi,zi,shape,area,SI,windowSize,filt):
     estz=estz[delta:-delta,delta:-delta]
     estb=estb[delta:-delta,delta:-delta]
     stdzmat=stdzmat[delta:-delta,delta:-delta]
-    # pad the value toward the borders to keep the same size of the input data
-    # for plateau plot
-    outx=np.pad(estx,(delta,delta),'edge').ravel()
-    outy=np.pad(esty,(delta,delta),'edge').ravel()
-    outz=np.pad(estz,(delta,delta),'edge').ravel()
-    outb=np.pad(estb,(delta,delta),'edge').ravel()
     #group the solutions for the classic plot
     classic=np.stack((estx.ravel(),esty.ravel(),estz.ravel(),estb.ravel(),
                         stdzmat.ravel()),axis=-1)
     #sort the solutions according to the std of df/dz and filter a percentage
     classic_est=np.array(sorted(classic, key=lambda l:l[-1],reverse=True)) \
                      [:int(len(classic)*filt),:-1]
-    #group the solutions for the plateau plot
-    plateau_est=np.stack((outx.ravel(),outy.ravel(),outz.ravel(),outb.ravel()),
-                        axis=-1)
-    
-    return classic_est,plateau_est
+    return classic_est
