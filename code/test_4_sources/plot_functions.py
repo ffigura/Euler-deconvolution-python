@@ -4,11 +4,11 @@ Plot functions
 A Python program to plot the total-field anomaly and the estimates
 on classic plot. 
 
-This code plot the figures 3 and 4 in the folder 'figures'.
+This code plot the figures 2, 3 and 4 in the folder 'figures'.
 
 This code is released from the paper: 
 Reliable Euler deconvolution estimates throughout the
-vertical derivatives in the sensitivity matrix
+vertical derivatives of the total-field anomaly
 
 The program is under the conditions terms in the file README.txt
 
