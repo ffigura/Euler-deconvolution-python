@@ -5,7 +5,7 @@ A Python program to perform Euler deconvolution on gridded data.
 
 This code is released from the paper: 
 Reliable Euler deconvolution estimates throughout the
-vertical derivatives in the sensitivity matrix
+vertical derivatives of the total-field anomaly
 
 The program is under the conditions terms in the file README.txt
 
