@@ -74,7 +74,7 @@ Test data:
 3 - Prerequisites
 ----------------------
 The Python program Euler deconvolution - `euler_python.py` and the scripts `estimates_statistics.py` requires 
-the Python library "numpy" and the scripts `synthetic_python.py` and `plot_functions.py` requires the Python
+the Python library "numpy" and the scripts `synthetic_test.py` and `plot_functions.py` requires the Python
 packages "numpy" and "matplotlib". 
 The easier way to get Python and all libraries installed is through the Anaconda Python 
 distribution (https://www.anaconda.com/distribution/). After installed Anaconda, install the libraries 
