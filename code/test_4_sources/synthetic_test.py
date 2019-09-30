@@ -28,7 +28,7 @@ yi=data_input[:,1]
 zi=data_input[:,2]
 data=data_input[:,3]
 
-#Plot input data - Figure 2
+#Plot input data - Figure 3
 plt_fc.plot_input_data(data,xi,yi,zi,shape)
 '''
 These are the two parameters of our methodology for Euler deconvolution:
@@ -41,6 +41,7 @@ filt=0.08
 #empty arrays for multiple SIs
 est_classic=[]
 est_plateau=[]
+#Define below the SIs to be tested
 SI_vet=[0.001,1,2,3]
 '''
 Euler deconvolution for multiple SIs

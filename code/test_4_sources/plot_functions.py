@@ -41,7 +41,7 @@ def plot_input_data(data,xi,yi,zi,shape):
     fig=plt.figure(figsize=(13, 10))
     
     ax = plt.subplot(221)
-    plt.title("(a)", fontsize = 14, loc='center',y=-0.26)
+    plt.title("(a)", fontsize = 14, loc='center',y=-0.26,x=0.4)
     ax.imshow(im1)
     ax.axis('off') 
     
