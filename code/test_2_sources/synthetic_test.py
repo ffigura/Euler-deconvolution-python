@@ -38,6 +38,7 @@ filt=0.02
 #empty arrays for multiple SIs
 est_classic=[]
 est_plateau=[]
+#Define below the SIs to be tested
 SI_vet=[2,3]
 '''
 Euler deconvolution for multiple SIs
