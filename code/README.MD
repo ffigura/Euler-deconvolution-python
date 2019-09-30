@@ -19,9 +19,11 @@ and the matplotlib is required to run the scripts `plot_functions.py` and `synth
 
 3 - Prerequisites
 
-4 - Running the files
+4 - Parameterization
 
-5 - License
+5 - Running the files
+
+6 - License
 
 ===============================================================================
 
@@ -81,8 +83,15 @@ by running the following command in your terminal:
 
 The program for Euler deconvolution `euler_python.py` and the algorithm `synthetic_test.py`
  are compatible with both Python 2.7 and 3.7.
+ 
+4 - Parameterization
+----------------------
+There are two parameters for Euler deconvolution:
 
-4 - Running the files
+
+
+
+5 - Running the files
 ----------------------
 After Anaconda and the libraries are installed, you need to run 
 the code `synthetic_test.py` to generate the results.
@@ -115,7 +124,7 @@ script, the figures and results of the synthetic test presented in the publicati
 The figures generated may differ from the publication and can be adapted in the script `plot_functions.py`.
 
 
-5 - License
+6 - License
 ----------------------
 The following legal note is restricted solely to the content of the named files. It cannot
 overrule licenses from the Python standard distribution modules, which are imported and
