@@ -90,7 +90,7 @@ There are the two parameters of our methodology for Euler deconvolution: window 
 The moving data window size is defined in the parameter `winsize` and the percentage of the solutions that will be keep is defined in the parameter `filt`.
 
 Additionally, the structural indexes are defined in the array `SI_vet`, this array can receive as many SIs as desired.
-The areas used to get the statistics about the mean depth are defined in a polygon by the vector  `area_cla=[S,N,W,E]`, where the vertices of the polygon are defined as south,northing,west,east - meters the same unit as input.
+The areas used to get the statistics about the mean depth are defined in a polygon by the vector  `area_cla=[S,N,W,E]`, where the vertices of the polygon are defined as south, northing, west, east - meters the same unit as input.
 
 5 - Running the files
 ----------------------
