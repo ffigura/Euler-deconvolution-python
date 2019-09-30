@@ -86,10 +86,10 @@ The program for Euler deconvolution `euler_python.py` and the algorithm `synthet
  
 4 - Parameterization
 ----------------------
-There are two parameters for Euler deconvolution:
+There are the two parameters of our methodology for Euler deconvolution: window size and the percentage of solutions to keep. 
+The moving data window size is defined in the parameter `winsize` and the percentage of the solutions that will be keep is defined in the parameter `filt`.
 
-
-
+Additionally, the structural indexes are defined in the vector `SI_vet` and the areas used to get the statistics about the mean depth are defined in the vector  `area_cla=[S,N,W,E]`, where the vertices of a polygon are defined as south,northing,west,east - meters the same unit as input.
 
 5 - Running the files
 ----------------------
