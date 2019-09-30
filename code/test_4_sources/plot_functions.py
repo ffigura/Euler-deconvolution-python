@@ -17,39 +17,10 @@ email: felipe146@hotmail.com, valcris@on.br
 """
 
 import numpy as np
-import matplotlib as mpl
 import matplotlib.pylab as plt
 import gc
 import matplotlib.patches as patches
 
-'''
-For a nice plot of magnetic anomaly and b-estimates
- following Niccoli (2014)
-'''
-LinL = np.loadtxt('input/Linear_L_0-1.txt')
-
-b3=LinL[:,2] # value of blue at sample n
-b2=LinL[:,2] # value of blue at sample n
-b1=np.linspace(0,1,len(b2)) # position of sample n - ranges from 0 to 1
-
-# setting up columns for list
-g3=LinL[:,1]
-g2=LinL[:,1]
-g1=np.linspace(0,1,len(g2))
-r3=LinL[:,0]
-r2=LinL[:,0]
-r1=np.linspace(0,1,len(r2))
-# creating list
-R=zip(r1,r2,r3)
-G=zip(g1,g2,g3)
-B=zip(b1,b2,b3)
-# transposing list
-RGB=zip(R,G,B)
-rgb=zip(*RGB)
-# creating dictionary
-k=['red', 'green', 'blue']
-LinearL=dict(zip(k,rgb)) # makes a dictionary from 2 lists
-my_cmap = mpl.colors.LinearSegmentedColormap('my_colormap',LinearL) 
 #######################################################################
 
 def plot_input_data(data,xi,yi,zi,shape):
@@ -75,20 +46,20 @@ def plot_input_data(data,xi,yi,zi,shape):
     ax.axis('off') 
     
     ax = plt.subplot(222)
-    rect0 = patches.Rectangle((26,0),2,24,linewidth=1,edgecolor='crimson',
+    rect0 = patches.Rectangle((26,0),2,24,linewidth=1,edgecolor='black',
                               facecolor='none',linestyle='-',zorder=2)
     rect1 = patches.Rectangle((16.850,10),0.3,24,linewidth=1,
-                              edgecolor='crimson',facecolor='none',
+                              edgecolor='black',facecolor='none',
                               linestyle='-',zorder=2)
     rect2 = patches.Rectangle((6.850,15.850),0.3,0.3,linewidth=1,
-                              edgecolor='crimson',facecolor='none',
+                              edgecolor='black',facecolor='none',
                               linestyle='-',zorder=2)
     rect3 = patches.Rectangle((6.850,6.850),0.4,0.4,linewidth=1,
-                              edgecolor='crimson',facecolor='none',
+                              edgecolor='black',facecolor='none',
                               linestyle='-',zorder=2)
     plt.title("(b)", fontsize = 14, loc='center',y=-0.27)
     im=plt.contourf(yi.reshape(shape)/1000.,xi.reshape(shape)/1000.,
-                   noise_free_data.reshape(shape), 30, cmap=my_cmap)
+                   noise_free_data.reshape(shape), 30, cmap='rainbow')
     ax = plt.gca()
     ax.set_ylabel('Northing (km)', fontsize = 14)
     ax.set_xlabel('Easting (km)', fontsize = 14)
@@ -102,27 +73,27 @@ def plot_input_data(data,xi,yi,zi,shape):
     cbar.ax.tick_params(labelsize=13)
     ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
     ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
-    plt.text(22.5,5,'P0',color='w',weight='bold', size='x-large')
-    plt.text(19.5,18,'P1',color='w',weight='bold', size='x-large')
-    plt.text(7,19,'P2',color='w',weight='bold', size='x-large')
-    plt.text(3,4,'P3',color='w',weight='bold', size='x-large')
+    plt.text(22.5,5,'P0',color='k', size='large')
+    plt.text(19.5,18,'P1',color='k', size='large')
+    plt.text(7,19,'P2',color='k', size='large')
+    plt.text(3,4,'P3',color='k', size='large')
     
     
     ax = plt.subplot(223)
-    rect0 = patches.Rectangle((26,0),2,24,linewidth=1,edgecolor='crimson',
+    rect0 = patches.Rectangle((26,0),2,24,linewidth=1,edgecolor='black',
                               facecolor='none',linestyle='-',zorder=2)
     rect1 = patches.Rectangle((16.850,10),0.3,24,linewidth=1,
-                              edgecolor='crimson',facecolor='none',
+                              edgecolor='black',facecolor='none',
                               linestyle='-',zorder=2)
     rect2 = patches.Rectangle((6.850,15.850),0.3,0.3,linewidth=1,
-                              edgecolor='crimson',facecolor='none',
+                              edgecolor='black',facecolor='none',
                               linestyle='-',zorder=2)
     rect3 = patches.Rectangle((6.850,6.850),0.4,0.4,linewidth=1,
-                              edgecolor='crimson',facecolor='none',
+                              edgecolor='black',facecolor='none',
                               linestyle='-',zorder=2)
     plt.title("(c)", fontsize = 14, loc='center',y=-0.27)
     im=plt.contourf(yi.reshape(shape)/1000.,xi.reshape(shape)/1000.,
-                   input_b.reshape(shape), 30, cmap=my_cmap)
+                   input_b.reshape(shape), 30, cmap='rainbow')
     ax = plt.gca()
     ax.set_ylabel('Northing (km)', fontsize = 14)
     ax.set_xlabel('Easting (km)', fontsize = 14)
@@ -136,26 +107,26 @@ def plot_input_data(data,xi,yi,zi,shape):
     cbar.ax.tick_params(labelsize=13)
     ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
     ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
-    plt.text(22.5,5,'P0',color='w',weight='bold', size='x-large')
-    plt.text(19.5,18,'P1',color='w',weight='bold', size='x-large')
-    plt.text(7,19,'P2',color='w',weight='bold', size='x-large')
-    plt.text(3,4,'P3',color='w',weight='bold', size='x-large')
+    plt.text(22.5,5,'P0',color='k', size='large')
+    plt.text(19.5,18,'P1',color='k', size='large')
+    plt.text(7,19,'P2',color='k', size='large')
+    plt.text(3,4,'P3',color='k', size='large')
     
     ax = plt.subplot(224)
-    rect0 = patches.Rectangle((26,0),2,24,linewidth=1,edgecolor='crimson',
+    rect0 = patches.Rectangle((26,0),2,24,linewidth=1,edgecolor='black',
                               facecolor='none',linestyle='-',zorder=2)
     rect1 = patches.Rectangle((16.850,10),0.3,24,linewidth=1,
-                              edgecolor='crimson',facecolor='none',
+                              edgecolor='black',facecolor='none',
                               linestyle='-',zorder=2)
     rect2 = patches.Rectangle((6.850,15.850),0.3,0.3,linewidth=1,
-                              edgecolor='crimson',facecolor='none',
+                              edgecolor='black',facecolor='none',
                               linestyle='-',zorder=2)
     rect3 = patches.Rectangle((6.850,6.850),0.4,0.4,linewidth=1,
-                              edgecolor='crimson',facecolor='none',
+                              edgecolor='black',facecolor='none',
                               linestyle='-',zorder=2)
     plt.title("(d)", fontsize = 14, loc='center',y=-0.27)
     im=plt.contourf(yi.reshape(shape)/1000.,xi.reshape(shape)/1000.,
-                   data.reshape(shape), 30, cmap=my_cmap)
+                   data.reshape(shape), 30, cmap='rainbow')
     ax = plt.gca()
     ax.set_ylabel('Northing (km)', fontsize = 14)
     ax.set_xlabel('Easting (km)', fontsize = 14)
@@ -169,10 +140,10 @@ def plot_input_data(data,xi,yi,zi,shape):
     cbar.ax.tick_params(labelsize=13)
     ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
     ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
-    plt.text(22.5,5,'P0',color='w',weight='bold', size='x-large')
-    plt.text(19.5,18,'P1',color='w',weight='bold', size='x-large')
-    plt.text(7,19,'P2',color='w',weight='bold', size='x-large')
-    plt.text(3,4,'P3',color='w',weight='bold', size='x-large')
+    plt.text(22.5,5,'P0',color='k', size='large')
+    plt.text(19.5,18,'P1',color='k', size='large')
+    plt.text(7,19,'P2',color='k', size='large')
+    plt.text(3,4,'P3',color='k', size='large')
         
     plt.subplots_adjust(wspace=0.15,hspace=0.3)
     
@@ -257,7 +228,7 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
             scat=plt.scatter(est_classic[i][:,1]/1000.,
                              est_classic[i][:,0]/1000.,s=40,
                              c=(est_classic[i][:,3]/1000.), 
-                             cmap=my_cmap,vmin=minb,
+                             cmap='rainbow',vmin=minb,
                              vmax=maxb,edgecolors='k')             
             cbar=plt.colorbar(scat,ticks=levelsb,pad=0.01,shrink=1,
                               format='%d')
@@ -289,7 +260,7 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
             ax.tick_params(labelsize=13)
             scat=plt.scatter(est_classic[i][:,1]/1000., 
                              est_classic[i][:,0]/1000.,s=40,
-                             c=(est_classic[i][:,3]),cmap=my_cmap,
+                             c=(est_classic[i][:,3]),cmap='rainbow',
                              vmin=minb, vmax=maxb,edgecolors='k')        
             cbar=plt.colorbar(scat,ticks=levelsb,pad=0.01,shrink=1,
                               format='%d')
