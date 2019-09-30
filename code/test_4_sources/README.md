@@ -10,4 +10,4 @@ can be adapted in the script `plot_functions.py`.
 		in this folder. The figures generated may differ from the publication and
 		can be adapted in the script `plot_functions.py`.
 		
-- results - the mean of the north, east and depth estimates over the selected areas.
+- results - the mean of the northing, easting and depth estimates over the selected areas.
