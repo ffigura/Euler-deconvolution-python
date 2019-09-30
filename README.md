@@ -32,7 +32,7 @@ We propose a novel methodology to select reliable Euler deconvolution estimates 
 	Python script to generate the figures in the synthetic tests results. 
 	
 - estimates_statistics.py:
-	Python script to compute the mean of the depth estimates. 	
+	Python script to compute the mean of the north, east and depth estimates. 	
 	
 Test data:
 
