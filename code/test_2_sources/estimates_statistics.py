@@ -1,7 +1,8 @@
 """
 Estimates statistics
 
-A Python program to compute the mean of depth estimates. 
+A Python program to compute the mean of the northing, easting and 
+depth estimates.  
 
 The outputs are placed at the folder 'results'.
 The nomenclature is 'classic_pltX.txt', where
@@ -37,10 +38,12 @@ def classic(est_classic,area_plt,SI_vet,name):
         masked = np.ma.array(masked, mask=np.repeat(masked[:,1]>=area_plt[3],
                                                         estimates.shape[1]))
         
-        mean=(np.mean(masked[:, 2]/1000.))        
-        results.append(mean)
+        meanx=(np.mean(masked[:, 0]/1000.))
+        meany=(np.mean(masked[:, 1]/1000.))
+        meanz=(np.mean(masked[:, 2]/1000.))        
+        results.append([SI_vet[i],meanx,meany,meanz])
         
-    output=[(SI_vet[i],results[i]) for i in range (0,len(SI_vet))]        
+    output=np.array([(results[i]) for i in range (0,len(SI_vet))])             
     np.savetxt('results/'+str(name)+'.txt',output,fmt='%.3f',\
-               header="SI,mean z",comments='')            
+               header="SI, mean x, mean y, mean z",comments='')              
     return
