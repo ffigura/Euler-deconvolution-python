@@ -192,10 +192,10 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
         ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
         ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
         ax.set_xticks([0,5,10,15,20,25])
-        plt.text(21,5,'P0',color='w', size='large')
+        plt.text(22.5,5,'P0',color='w', size='large')
         plt.text(19.5,18,'P1',color='w', size='large')
         plt.text(7,19,'P2',color='w', size='large')
-        plt.text(3,2.3,'P3',color='w', size='large')   
+        plt.text(3,4,'P3',color='w', size='large')
         
     plt.subplots_adjust(wspace=0.15,hspace=0.32)
         
@@ -238,10 +238,10 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
             ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
             ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
             ax.set_xticks([0,5,10,15,20,25])
-            plt.text(21,5,'P0',color='w', size='large')
+            plt.text(22.5,5,'P0',color='w', size='large')
             plt.text(19.5,18,'P1',color='w', size='large')
             plt.text(7,19,'P2',color='w', size='large')
-            plt.text(3,2.3,'P3',color='w',size='large') 
+            plt.text(3,4,'P3',color='w', size='large') 
             plt.text(25,25,'x10$^{3}$',color='k',size='medium')
             
         else:
@@ -270,10 +270,10 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
             ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
             ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
             ax.set_xticks([0,5,10,15,20,25])
-            plt.text(21,5,'P0',color='w', size='large')
+            plt.text(22.5,5,'P0',color='w', size='large')
             plt.text(19.5,18,'P1',color='w', size='large')
             plt.text(7,19,'P2',color='w', size='large')
-            plt.text(3,2.3,'P3',color='w',size='large')    
+            plt.text(3,4,'P3',color='w', size='large')   
             
     plt.subplots_adjust(wspace=0.15,hspace=0.32)
         
