@@ -38,9 +38,8 @@ window size and the percentage of solutions to keep
 winsize=9
 #percentage of the solutions that will be keep
 filt=0.08
-#empty arrays for multiple SIs
+#empty array for multiple SIs
 est_classic=[]
-est_plateau=[]
 #Define below the SIs to be tested
 SI_vet=[0.001,1,2,3]
 '''
