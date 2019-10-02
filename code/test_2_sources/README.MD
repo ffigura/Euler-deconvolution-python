@@ -4,6 +4,10 @@ Running the code `synthetic_test.py` will allow the reprodution of the results.
 The figures generated may differ from the publication and 
 can be adapted in the script `plot_functions.py`.
 
+## Input:
+
+- input - synthetic_data.dat
+
 ## Outputs:
 
 - figures - Figure 5 that generated the synthetic example in the manuscript will be saved
