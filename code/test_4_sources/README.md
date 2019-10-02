@@ -23,8 +23,7 @@ can be adapted in the script `plot_functions.py`.
              Ex.: to test only the SI = 1 -> SI_vet = [1]
                   to test the four SIs -> SI_vet = [0.01,1,2,3]
 
-- The areas to compute the statistics about the mean of the northing,
-easting and depth estimates:
+- The areas to compute the statistics about the mean of the northing, easting and depth estimates:
     area_cla  - array defining the four vertices of a polygon 
                 [south,north,west,east]
 
