@@ -86,7 +86,7 @@ The program for Euler deconvolution `euler_python.py` and the algorithm `synthet
  
 4 - Parameterization
 ----------------------
-There are the two parameters of our methodology for Euler deconvolution: window size and the percentage of solutions to keep. 
+These are the two parameters of our methodology for Euler deconvolution: window size and the percentage of solutions to keep. 
 The moving data window size is defined in the parameter `winsize` and the percentage of the solutions that will be keep is defined in the parameter `filt`.
 
 Additionally, the structural indices are defined in the array `SI_vet`, this array can receive as many SIs as desired.
