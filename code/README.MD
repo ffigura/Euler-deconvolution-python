@@ -35,7 +35,7 @@ We propose a novel methodology to select reliable Euler deconvolution estimates 
 2 - Content
 ----------------------
 
-Both synthetic tests can be reproduced with this codes. The test 1 can be reproduced from the folder
+Both synthetic tests can be reproduced with these codes. The test 1 can be reproduced from the folder
 `test_4_sources` and the test 2 can be reproduced from the folder `test_2_sources`.
 
 Python codes:
