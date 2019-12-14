@@ -199,7 +199,7 @@ def euler_deconv(data,xi,yi,zi,shape,area,SI,windowSize,filt):
 
     Returns:
 
-    * estimates_clu : 2d-array
+    * classic_est : 2d-array
         x, y, z and base-level best estimates kept after select a percentage
     """   
     data=data.reshape(shape)
