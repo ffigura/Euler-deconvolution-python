@@ -8,7 +8,7 @@ can be adapted in the script `plot_functions.py`.
 
 - input - synthetic_data.dat
 	  2d-array with "n" rows by 4 colunms: x-coordinate, y-coordinate, z-coordinate, anomaly
-	  where "n" rows correespond to the size of the data.
+	  where "n" rows correspond to the size of the data
 
 ## Parameters:
 
