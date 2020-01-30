@@ -53,9 +53,9 @@ or [download a zip archive](https://github.com/ffigura/Euler-deconvolution-pytho
 
 ## Dependencies
 
-The Python program Euler deconvolution - "euler_python.py" requires the Python library "numpy", 
-the scripts "synthetic_test.py" and "plot_functions.py" require the Python packages "numpy"
-and "matplotlib", and the script "estimates_statistics.py" requires the Python package "numpy".
+The Python program for Euler deconvolution "euler_python.py" and the scripts "synthetic_test.py"
+and "estimates_statistics.py" require the Python package "numpy", and the script "plot_functions.py"
+requires the Python packages "matplotlib".
 The easier way to get Python and all libraries installed is through the Anaconda Python 
 distribution (https://www.anaconda.com/distribution/). After installed Anaconda, install the libraries 
 by running the following command in your terminal:
