@@ -4,7 +4,7 @@ Plot functions
 A Python program to plot the total-field anomaly and the estimates
 on classic plot. 
 
-This code plot the figures 2, 3 and 4 in the folder 'figures'.
+This code plot the figures 2d, 4 and 7 in the folder 'figures'.
 
 This code is released from the paper: 
 Reliable Euler deconvolution estimates throughout the
@@ -26,74 +26,25 @@ import matplotlib.patches as patches
 def plot_input_data(data,xi,yi,zi,shape):
 
     '''
-    Plot the input data - Figure 2
+    Plot the input data - Figure 2d
     '''
     
-    data_input=np.loadtxt('input/synthetic_base_level.dat')
-    input_b=data_input[:,3]
+    fig=plt.figure(figsize=(5, 4))
     
-    data_input=np.loadtxt('input/noise_synthetic_data.dat')
-    noise_free_data=data_input[:,3]
+    rect0 = patches.Rectangle((26,0),2,24,linewidth=1,edgecolor='black',
+                              facecolor='none',linestyle='-',zorder=2)
+    rect1 = patches.Rectangle((16.850,10),0.3,24,linewidth=1,
+                              edgecolor='black',facecolor='none',
+                              linestyle='-',zorder=2)
+    rect2 = patches.Rectangle((6.850,15.850),0.3,0.3,linewidth=1,
+                              edgecolor='black',facecolor='none',
+                              linestyle='-',zorder=2)
+    rect3 = patches.Rectangle((6.800,6.800),0.4,0.4,linewidth=1,
+                              edgecolor='black',facecolor='none',
+                              linestyle='-',zorder=2)
 
-    im1 = plt.imread('input/prisms_ppt.tif')
-    
-    
-    fig=plt.figure(figsize=(13, 10))
-    
-    ax = plt.subplot(221)
-    plt.title("(a)", fontsize = 14, loc='center',y=-0.26,x=0.4)
-    ax.imshow(im1)
-    ax.axis('off') 
-    
-    ax = plt.subplot(222)
-    rect0 = patches.Rectangle((26,0),2,24,linewidth=1,edgecolor='black',
-                              facecolor='none',linestyle='-',zorder=2)
-    rect1 = patches.Rectangle((16.850,10),0.3,24,linewidth=1,
-                              edgecolor='black',facecolor='none',
-                              linestyle='-',zorder=2)
-    rect2 = patches.Rectangle((6.850,15.850),0.3,0.3,linewidth=1,
-                              edgecolor='black',facecolor='none',
-                              linestyle='-',zorder=2)
-    rect3 = patches.Rectangle((6.850,6.850),0.4,0.4,linewidth=1,
-                              edgecolor='black',facecolor='none',
-                              linestyle='-',zorder=2)
-    plt.title("(b)", fontsize = 14, loc='center',y=-0.27)
     im=plt.contourf(yi.reshape(shape)/1000.,xi.reshape(shape)/1000.,
-                   noise_free_data.reshape(shape), 30, cmap='rainbow')
-    ax = plt.gca()
-    ax.set_ylabel('Northing (km)', fontsize = 14)
-    ax.set_xlabel('Easting (km)', fontsize = 14)
-    ax.tick_params(labelsize=13)
-    cbar=fig.colorbar(im,pad=0.01,shrink=1)
-    cbar.set_label('nT',labelpad=-21,y=-0.01, rotation=0,fontsize=13)
-    ax.add_patch(rect0)
-    ax.add_patch(rect1)
-    ax.add_patch(rect2)
-    ax.add_patch(rect3)
-    cbar.ax.tick_params(labelsize=13)
-    ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
-    ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
-    plt.text(22.5,5,'P0',color='k', size='large')
-    plt.text(19.5,18,'P1',color='k', size='large')
-    plt.text(7,19,'P2',color='k', size='large')
-    plt.text(3,4,'P3',color='k', size='large')
-    
-    
-    ax = plt.subplot(223)
-    rect0 = patches.Rectangle((26,0),2,24,linewidth=1,edgecolor='black',
-                              facecolor='none',linestyle='-',zorder=2)
-    rect1 = patches.Rectangle((16.850,10),0.3,24,linewidth=1,
-                              edgecolor='black',facecolor='none',
-                              linestyle='-',zorder=2)
-    rect2 = patches.Rectangle((6.850,15.850),0.3,0.3,linewidth=1,
-                              edgecolor='black',facecolor='none',
-                              linestyle='-',zorder=2)
-    rect3 = patches.Rectangle((6.850,6.850),0.4,0.4,linewidth=1,
-                              edgecolor='black',facecolor='none',
-                              linestyle='-',zorder=2)
-    plt.title("(c)", fontsize = 14, loc='center',y=-0.27)
-    im=plt.contourf(yi.reshape(shape)/1000.,xi.reshape(shape)/1000.,
-                   input_b.reshape(shape), 30, cmap='rainbow')
+                   data.reshape(shape), 30, cmap='jet')
     ax = plt.gca()
     ax.set_ylabel('Northing (km)', fontsize = 14)
     ax.set_xlabel('Easting (km)', fontsize = 14)
@@ -108,49 +59,15 @@ def plot_input_data(data,xi,yi,zi,shape):
     ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
     ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
     plt.text(22.5,5,'P0',color='k', size='large')
-    plt.text(19.5,18,'P1',color='k', size='large')
-    plt.text(7,19,'P2',color='k', size='large')
-    plt.text(3,4,'P3',color='k', size='large')
+    plt.text(13.5,14,'P1',color='k', size='large')
+    plt.text(3,16,'P2',color='k', size='large')
+    plt.text(3,5,'P3',color='k', size='large')
     
-    ax = plt.subplot(224)
-    rect0 = patches.Rectangle((26,0),2,24,linewidth=1,edgecolor='black',
-                              facecolor='none',linestyle='-',zorder=2)
-    rect1 = patches.Rectangle((16.850,10),0.3,24,linewidth=1,
-                              edgecolor='black',facecolor='none',
-                              linestyle='-',zorder=2)
-    rect2 = patches.Rectangle((6.850,15.850),0.3,0.3,linewidth=1,
-                              edgecolor='black',facecolor='none',
-                              linestyle='-',zorder=2)
-    rect3 = patches.Rectangle((6.850,6.850),0.4,0.4,linewidth=1,
-                              edgecolor='black',facecolor='none',
-                              linestyle='-',zorder=2)
-    plt.title("(d)", fontsize = 14, loc='center',y=-0.27)
-    im=plt.contourf(yi.reshape(shape)/1000.,xi.reshape(shape)/1000.,
-                   data.reshape(shape), 30, cmap='rainbow')
-    ax = plt.gca()
-    ax.set_ylabel('Northing (km)', fontsize = 14)
-    ax.set_xlabel('Easting (km)', fontsize = 14)
-    ax.tick_params(labelsize=13)
-    cbar=fig.colorbar(im,pad=0.01,shrink=1)
-    cbar.set_label('nT',labelpad=-21,y=-0.01, rotation=0,fontsize=13)
-    ax.add_patch(rect0)
-    ax.add_patch(rect1)
-    ax.add_patch(rect2)
-    ax.add_patch(rect3)
-    cbar.ax.tick_params(labelsize=13)
-    ax.set_xlim(np.min(yi/1000.),np.max(yi/1000.))
-    ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
-    plt.text(22.5,5,'P0',color='k', size='large')
-    plt.text(19.5,18,'P1',color='k', size='large')
-    plt.text(7,19,'P2',color='k', size='large')
-    plt.text(3,4,'P3',color='k', size='large')
-        
-    plt.subplots_adjust(wspace=0.15,hspace=0.3)
-    
-    plt.savefig('figures/FIG2.png', bbox_inches='tight', dpi = 600)
+    plt.savefig('figures/FIG2d.png', bbox_inches='tight', dpi = 600)
     plt.close('all')
     
     return
+
 
 def plot_classic(data,est_classic,xi,yi,zi,shape):
     '''
@@ -158,17 +75,17 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
     '''
     
     '''
-    Figure 3 source-position (depth) estimates
+    Figure 4 source-position (depth) estimates
     '''
     vet_title=["(a)","(b)","(c)","(d)"]
     
     
     minz = np.min(0.)
-    maxz = np.max(1.5)
-    levelsz = np.linspace(minz,maxz,7)   
+    maxz = np.max(2.)
+    levelsz = np.linspace(minz,maxz,11)   
     
     #depth plots
-    plt.figure(figsize=(13, 10))
+    plt.figure(figsize=(12, 8.5))
     for i in range (4):
      
         plt.subplot(2,2,i+1)  
@@ -193,21 +110,21 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
         ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
         ax.set_xticks([0,5,10,15,20,25])
         plt.text(22.5,5,'P0',color='w', size='large')
-        plt.text(19.5,18,'P1',color='w', size='large')
-        plt.text(7,19,'P2',color='w', size='large')
-        plt.text(3,4,'P3',color='w', size='large')
+        plt.text(13.5,14,'P1',color='w', size='large')
+        plt.text(3,16,'P2',color='w', size='large')
+        plt.text(3,5,'P3',color='w', size='large')
         
     plt.subplots_adjust(wspace=0.15,hspace=0.32)
         
-    plt.savefig('figures/FIG3.png',bbox_inches='tight', dpi = 600)
+    plt.savefig('figures/FIG4.png',bbox_inches='tight', dpi = 600)
     plt.close('all')
     gc.collect()
         
         
     '''
-    Figure 4 base level-position (base-level) estimates
+    Figure 7 base level-position (base-level) estimates
     '''
-    plt.figure(figsize=(13, 10))
+    plt.figure(figsize=(12, 8.5))
     for i in range (4):
      
         if i == 0:
@@ -228,7 +145,7 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
             scat=plt.scatter(est_classic[i][:,1]/1000.,
                              est_classic[i][:,0]/1000.,s=40,
                              c=(est_classic[i][:,3]/1000.), 
-                             cmap='rainbow',vmin=minb,
+                             cmap='jet',vmin=minb,
                              vmax=maxb,edgecolors='k')             
             cbar=plt.colorbar(scat,ticks=levelsb,pad=0.01,shrink=1,
                               format='%d')
@@ -239,9 +156,9 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
             ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
             ax.set_xticks([0,5,10,15,20,25])
             plt.text(22.5,5,'P0',color='w', size='large')
-            plt.text(19.5,18,'P1',color='w', size='large')
-            plt.text(7,19,'P2',color='w', size='large')
-            plt.text(3,4,'P3',color='w', size='large') 
+            plt.text(13.5,14,'P1',color='w', size='large')
+            plt.text(3,16,'P2',color='w', size='large')
+            plt.text(3,5,'P3',color='w', size='large') 
             plt.text(25,25,'x10$^{3}$',color='k',size='medium')
             
         else:
@@ -260,7 +177,7 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
             ax.tick_params(labelsize=13)
             scat=plt.scatter(est_classic[i][:,1]/1000., 
                              est_classic[i][:,0]/1000.,s=40,
-                             c=(est_classic[i][:,3]),cmap='rainbow',
+                             c=(est_classic[i][:,3]),cmap='jet',
                              vmin=minb, vmax=maxb,edgecolors='k')        
             cbar=plt.colorbar(scat,ticks=levelsb,pad=0.01,shrink=1,
                               format='%d')
@@ -271,13 +188,13 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
             ax.set_ylim(np.min(xi/1000.),np.max(xi/1000.))
             ax.set_xticks([0,5,10,15,20,25])
             plt.text(22.5,5,'P0',color='w', size='large')
-            plt.text(19.5,18,'P1',color='w', size='large')
-            plt.text(7,19,'P2',color='w', size='large')
-            plt.text(3,4,'P3',color='w', size='large')   
+            plt.text(13.5,14,'P1',color='w', size='large')
+            plt.text(3,16,'P2',color='w', size='large')
+            plt.text(3,5,'P3',color='w', size='large')   
             
     plt.subplots_adjust(wspace=0.15,hspace=0.32)
         
-    plt.savefig('figures/FIG4.png',bbox_inches='tight', dpi = 600)
+    plt.savefig('figures/FIG7.png',bbox_inches='tight', dpi = 600)
     plt.close('all')
     gc.collect()
     

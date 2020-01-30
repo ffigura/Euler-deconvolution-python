@@ -15,6 +15,12 @@ email: felipe146@hotmail.com, valcris@on.br
 """
 
 """
+Input:
+    
+input/synthetic_data.dat - 2d-array with "n" rows by 4 columns: 
+    x-coordinate, y-coordinate, z-coordinate, anomaly. Where "n" rows
+    correspond to the size of the data.
+
 Parameters:
 
 Size of the moving data window:    
@@ -50,16 +56,18 @@ yi=data_input[:,1]
 zi=data_input[:,2]
 data=data_input[:,3]
 
-#Plot input data - Figure 3
+'''
+Plot input data - Figure 2d
+'''
 plt_fc.plot_input_data(data,xi,yi,zi,shape)
 '''
 These are the two parameters of our methodology for Euler deconvolution:
 window size and the percentage of solutions to keep
 '''
 #moving data window size
-winsize=9
+winsize=7
 #percentage of the solutions that will be keep
-filt=0.08
+filt=0.1
 #empty array for multiple SIs
 est_classic=[]
 #Define below the SIs to be tested
@@ -68,12 +76,12 @@ SI_vet=[0.001,1,2,3]
 Euler deconvolution for multiple SIs
 '''
 for SI in (SI_vet):
-    classic=euler.euler_deconv(data,xi,yi,zi,shape,area,SI,winsize,
+    classic = euler.euler_deconv(data,xi,yi,zi,shape,area,SI,winsize,
                                        filt)
-    est_classic.append(classic)            
-#Here finishes Euler deconvolution     
+    est_classic.append(classic)     
+#Here finishes Euler deconvolution 
 '''
-Plot Figures 3 and 4 - All depth and base level estimates for all SIs
+Plot Figures 4 and 7 - Selected depth and base level estimates for all SIs
 '''
 plt_fc.plot_classic(data,est_classic,xi,yi,zi,shape)
 ''' 

@@ -201,6 +201,9 @@ def euler_deconv(data,xi,yi,zi,shape,area,SI,windowSize,filt):
 
     * classic_est : 2d-array
         x, y, z and base-level best estimates kept after select a percentage
+        
+    * classic : 2d-array
+        x, y, z, base-level and standard deviation of all estimates
     """   
     data=data.reshape(shape)
     dx,dy,dz=deriv(data,shape,area)
@@ -245,16 +248,18 @@ def euler_deconv(data,xi,yi,zi,shape,area,SI,windowSize,filt):
         estz[south+windowSize//2][east+windowSize//2]=p[2]
         estb[south+windowSize//2][east+windowSize//2]=p[3]
         stdzmat[south+windowSize//2][east+windowSize//2]=stdz
-        
+     
     # get rid of zeros in the border
     estx=estx[delta:-delta,delta:-delta]
     esty=esty[delta:-delta,delta:-delta]
     estz=estz[delta:-delta,delta:-delta]
     estb=estb[delta:-delta,delta:-delta]
     stdzmat=stdzmat[delta:-delta,delta:-delta]
+    xi=xi[delta:-delta,delta:-delta]
+    yi=yi[delta:-delta,delta:-delta]
     #group the solutions for the classic plot
     classic=np.stack((estx.ravel(),esty.ravel(),estz.ravel(),estb.ravel(),
-                        stdzmat.ravel()),axis=-1)
+					  stdzmat.ravel()),axis=-1)
     #sort the solutions according to the std of df/dz and filter a percentage
     classic_est=np.array(sorted(classic, key=lambda l:l[-1],reverse=True)) \
                      [:int(len(classic)*filt),:-1]    
