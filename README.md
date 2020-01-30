@@ -7,7 +7,7 @@ Felipe F. Melo and Valéria C.F. Barbosa
 
 This paper has been submitted for publication in the journal *Computers & Geosciences*.
 
-This repository contains the source code to perform the two synthetic tests presented. The codes `euler_python.py`, the synthetic data `synthetic_data.dat` of the first test presented in the paper and the codes `synthetic_test.py`, `estimates_statistics.py` and `plot_functions.py` to generate the results of the synthetic test related to our methodology.
+This repository contains the source code to perform the first synthetic test presented. The codes `euler_python.py`, the synthetic data `synthetic_data.dat` of the first test presented in the paper and the codes `synthetic_test.py`, `estimates_statistics.py` and `plot_functions.py` to generate the results of the synthetic test related to our methodology.
 
 The *euler_python* program is compatible with both Python 2.7 and Python 3.7 programming language.
  
