@@ -36,7 +36,7 @@ We propose a novel methodology to select reliable Euler deconvolution estimates 
 ----------------------
 
 Both synthetic tests can be reproduced with these codes. The test 1 can be reproduced from the folder
-`test_4_sources` and the test 2 can be reproduced from the folder `test_2_sources`.
+`test_4_sources`.
 
 Python codes:
 
@@ -51,14 +51,14 @@ Python codes:
 		"estimates_statistics.py" to compute the statistics of the data. 
 		
 	- plot_functions.py:
-		Python script to generate the figures in the synthetic tests results. 
+		Python script to generate the figures 2d, 4 and 7 in the first synthetic test. 
 	
 	- estimates_statistics.py:
 		Python script to compute the mean of the northing, easting and depth estimates.  
 	
 Outputs: 
  
-	- figures - all figures that generated the synthetic example in the manuscript will be saved
+	- figures - figures 2d, 4 and 7 in the first synthetic example in the manuscript will be saved
 			in this folder. The figures generated may differ from the publication and
 			can be adapted in the script `plot_functions.py`.
 						 
@@ -67,8 +67,9 @@ Outputs:
 Test data:
 
 	- input/synthetic_data.dat
-		Synthetic magnetic data generated using the Python packaged "Fatiando a Terra":	
-		http://fatiando.org/. This data is an example used in the current publication.
+		Synthetic magnetic data presented in figure 2d generated using the Python
+		packaged "Fatiando a Terra": http://fatiando.org/. This data is an example
+		used in the current publication.
 	
 3 - Prerequisites
 ----------------------
@@ -121,8 +122,9 @@ an external Python module. The functionalities are documented using standard Pyt
 docstrings.
 
 The file `synthetic_test.py` is a Python-based command line script. By using this 
-script, the figures and results of the synthetic test presented in the publication can be reproduced.
-The figures generated may differ from the publication and can be adapted in the script `plot_functions.py`.
+script, the figures 2d, 4 and 7 and results of the first synthetic test presented
+in the publication can be reproduced. The figures generated may differ from the
+publication and can be adapted in the script `plot_functions.py`.
 
 
 6 - License
