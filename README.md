@@ -7,7 +7,7 @@ Felipe F. Melo and Valéria C.F. Barbosa
 
 This paper has been submitted for publication in the journal *Computers & Geosciences*.
 
-This repository contains the source code to perform the two synthetic tests presented. The codes `euler_python.py`, the synthetic data `synthetic_data.dat` presented in the paper and the codes `synthetic_test.py`, `estimates_statistics.py` and `plot_functions.py` to generate the results of the synthetic test.
+This repository contains the source code to perform the two synthetic tests presented. The codes `euler_python.py`, the synthetic data `synthetic_data.dat` of the first test presented in the paper and the codes `synthetic_test.py`, `estimates_statistics.py` and `plot_functions.py` to generate the results of the synthetic test related to our methodology.
 
 The *euler_python* program is compatible with both Python 2.7 and Python 3.7 programming language.
  
@@ -29,7 +29,7 @@ We propose a novel methodology to select reliable Euler deconvolution estimates 
 	"estimates_statistics.py" to compute the statistics of the data.
 	
 - plot_functions.py:
-	Python script to generate the figures in the synthetic tests results. 
+	Python script to generate the figures 2d, 4 and 7 of the first synthetic test. 
 	
 - estimates_statistics.py:
 	Python script to compute the mean of the northing, easting and depth estimates. 
@@ -39,7 +39,7 @@ Test data:
 - synthetic_data.dat:
 		Synthetic total-field anomaly data generated using the Python packaged
 		"Fatiando a Terra": http://fatiando.org/. This data is an example used
-		in the current publication.
+		in the current publication and shown in figure 2d.
 
 ## Getting the code
 
@@ -67,9 +67,8 @@ The program for Euler deconvolution "euler_python.py" and the additional codes "
 
 ## Reproducing the results
 
-The results and figures for the synthetic test are reproducible from the folders `/test_4_sources` and 
-`/test_2_sources`.
-Running the code `synthetic_test.py` will allow the reprodution of the results. For more information
+The results and figures (2d, 4 and 7) for the synthetic test are reproducible from the folders `/test_4_sources`.
+Running the code `synthetic_test.py` will allow the reprodution of the results of our methodology. For more information
 read the file `README.MD` or `README.txt` in the folder `/code`.
 
 
