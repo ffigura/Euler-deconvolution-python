@@ -18,7 +18,6 @@ email: felipe146@hotmail.com, valcris@on.br
 
 import numpy as np
 import matplotlib.pylab as plt
-import gc
 import matplotlib.patches as patches
 
 #######################################################################
@@ -118,9 +117,7 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
         
     plt.savefig('figures/FIG4.png',bbox_inches='tight', dpi = 600)
     plt.close('all')
-    gc.collect()
-        
-        
+             
     '''
     Figure 7 base level-position (base-level) estimates
     '''
@@ -196,6 +193,5 @@ def plot_classic(data,est_classic,xi,yi,zi,shape):
         
     plt.savefig('figures/FIG7.png',bbox_inches='tight', dpi = 600)
     plt.close('all')
-    gc.collect()
     
     return
