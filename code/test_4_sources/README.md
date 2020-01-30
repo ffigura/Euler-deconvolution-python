@@ -7,8 +7,8 @@ can be adapted in the script `plot_functions.py`.
 ## Input:
 
 - input - synthetic_data.dat    
-    	  2d-array with "n" rows by 4 columns: x-coordinate, y-coordinate, z-coordinate, anomaly    
-    	  where "n" rows correspond to the size of the data
+    	  2d-array with "n" rows by 4 columns: x-coordinate, y-coordinate, z-coordinate, anomaly.    
+    	  Where "n" rows correspond to the size of the data
 
 ## Parameters:
 
@@ -23,7 +23,7 @@ can be adapted in the script `plot_functions.py`.
 - Structural indices used:
     SI_vet - an array that can store any of the four SIs.
              Ex.: to test only the SI = 1 -> SI_vet = [1]
-                  to test the four SIs -> SI_vet = [0.01,1,2,3]
+                  to test the four SIs -> SI_vet = [0.001,1,2,3]
 
 - The areas to compute the statistics about the mean of the northing, easting and depth estimates:
     area_cla  - array defining the four vertices of a polygon 
@@ -31,7 +31,7 @@ can be adapted in the script `plot_functions.py`.
 
 ## Outputs:
 
-- figures - Figures 2, 3 and 4 of the synthetic example in the manuscript will be saved
+- figures - Figures 2d, 4 and 7 of the synthetic example in the manuscript will be saved
 		in this folder. The figures generated may differ from the publication and
 		can be adapted in the script `plot_functions.py`.
 		
