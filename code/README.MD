@@ -82,8 +82,8 @@ by running the following command in your terminal:
 
 	conda install numpy matplotlib
 
-The program for Euler deconvolution `euler_python.py` and the algorithm `synthetic_test.py`
- are compatible with both Python 2.7 and 3.7.
+The program for Euler deconvolution `euler_python.py` and the algorithms `synthetic_test.py`, 
+`plot_functions` and `estimates_statistics.py` are compatible with both Python 2.7 and 3.7.
  
 4 - Parameterization
 ----------------------
@@ -114,17 +114,18 @@ There are two easy ways to run the synthetic test `synthetic_test.py`
 2. Open the Spyder program that comes with the Ananconda installation. In the Spyder, open
 the example script "synthetic_test.py" and click in "play" inside the Spyder to execute it.
 
-If everything runs ok, the figures and results shown in the publication will be saved, respectively,
-on the folders: `/figures` and `/results`.
+If everything runs ok, the figures and results shown in the first synthetic test of the 
+publication will be saved, respectively, on the folders: `/figures` and `/results`.
 
 The  module `euler_python.py` can be imported to an interactive Python session or called from
 an external Python module. The functionalities are documented using standard Python
 docstrings.
 
-The file `synthetic_test.py` is a Python-based command line script. By using this 
-script, the figures 2d, 4 and 7 and results of the first synthetic test presented
-in the publication can be reproduced. The figures generated may differ from the
-publication and can be adapted in the script `plot_functions.py`.
+The files `synthetic_test.py`, `plot_functions` and `estimates_statistics.py` are
+Python-based command line scripts. By using these scripts, the figures 2d, 4 and 7
+and results of the first synthetic test presented in the publication can be reproduced.
+The figures generated may differ from the publication and can be adapted in the script
+`plot_functions.py`.
 
 
 6 - License
