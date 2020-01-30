@@ -23,7 +23,7 @@ can be adapted in the script `plot_functions.py`.
 - Structural indices used:
     SI_vet - an array that can store any of the four SIs.
              Ex.: to test only the SI = 1 -> SI_vet = [1]
-                  to test the four SIs -> SI_vet = [0.001,1,2,3]
+                  to test the four SIs -> SI_vet = [0.001, 1, 2, 3]
 
 - The areas to compute the statistics about the mean of the northing, easting and depth estimates:
     area_cla  - array defining the four vertices of a polygon 
