@@ -5,6 +5,8 @@ Nacional) (2019)
 
 Email: felipe146@hotmail.com (F.F. Melo); valcris@on.br (V.C.F. Barbosa) 
 
+This paper has been published in the Computers & Geosciences. Melo, F.F., Barbosa, V.C.F., 2020. Reliable Euler deconvolution estimates throughout the vertical derivatives of the total-field anomaly. Computers & Geosciences, v. 138, p. 104436. https://doi.org/10.1016/j.cageo.2020.104436
+
 This repository contains a collection of Python codes and synthetic data 
 example for a paper about the open-source package Euler deconvolution.The 
 example data reproduce the synthetc results and figures shown in the publication.
