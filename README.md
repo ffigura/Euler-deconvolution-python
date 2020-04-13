@@ -5,7 +5,7 @@ Felipe F. Melo and Valéria C.F. Barbosa
 
 ## About
 
-This paper has been published in the journal *Computers & Geosciences*. `Melo, F.F., Barbosa, V.C.F., 2020. Reliable Euler deconvolution estimates throughout the vertical derivatives of the total-field anomaly. Computers & Geosciences, v. 138, p. 104436. https://doi.org/10.1016/j.cageo.2020.104436`
+This paper has been published in the journal *Computers & Geosciences*. `Melo, F.F., Barbosa, V.C.F., 2020. Reliable Euler deconvolution estimates throughout the vertical derivatives of the total-field anomaly. Computers & Geosciences, v. 138, p. 104436. https://doi.org/10.1016/j.cageo.2020.104436`.
 
 This repository contains the source code to perform the first synthetic test presented. The codes `euler_python.py`, the synthetic data `synthetic_data.dat` of the first test presented in the paper and the codes `synthetic_test.py`, `estimates_statistics.py` and `plot_functions.py` to generate the results of the synthetic test related to our methodology.
 
