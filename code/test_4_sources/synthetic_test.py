@@ -97,3 +97,14 @@ est_stats.classic(est_classic,area_cla0,SI_vet,'classic_plt0')
 est_stats.classic(est_classic,area_cla1,SI_vet,'classic_plt1')
 est_stats.classic(est_classic,area_cla2,SI_vet,'classic_plt2')
 est_stats.classic(est_classic,area_cla3,SI_vet,'classic_plt3')
+
+
+"""
+To save the estimates in a txt file:
+
+#convert the list to an array  
+output=np.asarray(est_classic)  
+#save the estimates in distinct files according to the SI  
+for i in range(len(SI_vet)):  
+	np.savetxt("file_SI_" + str(i) + ".txt",output[i],delimiter=",")
+"""
