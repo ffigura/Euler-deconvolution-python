@@ -35,3 +35,14 @@ can be adapted in the script `plot_functions.py`.
 		can be adapted in the script `plot_functions.py`.
 		
 - results - the mean of the northing, easting and depth estimates over the selected areas.
+
+
+## Extra:
+
+- to save the estimates in a txt file add to the end of the synthetic_test:
+
+#convert the list to array
+output=np.asarray(est_classic)
+#save the estimates in distinct files according to the SI
+for i in range(len(SI_vet)):
+    np.savetxt("file_SI_" + str(i) + ".txt",output[i],delimiter=",")
