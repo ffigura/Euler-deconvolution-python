@@ -45,5 +45,5 @@ can be adapted in the script `plot_functions.py`.
 output=np.asarray(est_classic)  
 #save the estimates in distinct files according to the SI  
 for i in range(len(SI_vet)):  
-	np.savetxt("file_SI_" + str(i) + ".txt",output[i],delimiter=",")
+	np.savetxt("estimates_SI_" + str(i) + ".txt",output[i],delimiter=",")
 ```
